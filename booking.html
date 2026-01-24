@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book & Pay | Inter Lao Tourism</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">INTER LAO TOURISM <span>Since 1989</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Packages</a></li>
+                <li><a href="booking.html" style="color:var(--primary); font-weight:bold;">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1>Secure Online Booking</h1>
+        <p>Reserve your tour securely. We accept Credit Cards and PayPal.</p>
+    </div>
+
+    <section class="container" style="max-width: 600px; margin: 0 auto;">
+        <div class="card" style="padding: 30px;">
+            <h3 style="margin-bottom: 20px; text-align: center;">Guest Reservation Form</h3>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <label>Full Name</label>
+                <input type="text" name="name" required placeholder="Ex: John Smith">
+
+                <label>Email Address</label>
+                <input type="email" name="email" required placeholder="Ex: john@email.com">
+
+                <label>Select Tour Package</label>
+                <select name="tour">
+                    <option value="Luang Prabang Heritage ($250)">Luang Prabang Heritage ($250)</option>
+                    <option value="Kuang Si Waterfalls ($80)">Kuang Si Waterfalls ($80)</option>
+                    <option value="Vang Vieng Adventure ($400)">Vang Vieng Adventure ($400)</option>
+                    <option value="Custom Tour">Custom / Other</option>
+                </select>
+
+                <label>Travel Date</label>
+                <input type="date" name="date" required>
+
+                <label>Number of Guests</label>
+                <input type="number" name="guests" min="1" value="2">
+
+                <hr style="margin: 20px 0; border:0; border-top:1px solid #eee;">
+
+                <h4 style="margin-bottom: 15px;">Payment Preference</h4>
+                <div style="margin-bottom: 20px;">
+                    <input type="radio" name="payment" value="Credit Card" checked style="width:auto;"> Credit Card (Visa/Mastercard)<br>
+                    <input type="radio" name="payment" value="PayPal" style="width:auto;"> PayPal<br>
+                    <input type="radio" name="payment" value="Bank Transfer" style="width:auto;"> Bank Transfer (BCEL)
+                </div>
+
+                <button type="submit" class="submit-btn" style="background-color: var(--accent);">Request Booking</button>
+                <p style="font-size: 0.8rem; color: #666; margin-top: 10px; text-align: center;">
+                    * We will check availability and send you a secure payment link within 24 hours.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Inter Lao Tourism. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
