@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My To-Do List</title>
+  <style>
+    /* CSS: Makes it look beautiful */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Full screen height */
+      margin: 0;
+    }
+
+    .app-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+
+    h2 { color: #333; }
+
+    input {
+      padding: 10px;
+      width: 70%;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover { background-color: #ff4757; }
+
+    ul {
+      list-style-type: none; /* Removes bullets */
+      padding: 0;
+      text-align: left;
+    }
+
+    li {
+      background: #eee;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    /* Style for the delete button inside the list */
+    .delete-btn {
+      color: red;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <h2>📝 My Tasks / ວຽກຂອງຂ້ອຍ</h2>
+    
+    <input type="text" id="taskInput" placeholder="New task...">
+    <button onclick="addTask()">Add</button>
+
+    <ul id="taskList">
+      </ul>
+  </div>
+
+  <script>
+    // JavaScript: Makes it work!
+    function addTask() {
+      // 1. Get the text from the input box
+      let input = document.getElementById("taskInput");
+      let taskText = input.value;
+
+      // 2. Check if the input is empty
+      if (taskText === "") {
+        alert("Please write a task! / ກະລຸນາຂຽນວຽກໃສ່ກ່ອນ!");
+        return;
+      }
+
+      // 3. Create a new list item (li)
+      let ul = document.getElementById("taskList");
+      let li = document.createElement("li");
+      
+      // 4. Add text and a delete button to the item
+      li.innerHTML = taskText + ' <span class="delete-btn" onclick="deleteTask(this)">x</span>';
+
+      // 5. Add the new item to the list
+      ul.appendChild(li);
+
+      // 6. Clear the input box
+      input.value = "";
+    }
+
+    function deleteTask(element) {
+      // Remove the parent <li> of the clicked 'x'
+      element.parentElement.remove();
+    }
+  </script>
+
+</body>
+</html>
