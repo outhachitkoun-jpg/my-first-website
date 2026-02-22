@@ -4,11 +4,11 @@
 /* ========== VARIABLES & RESET ========== */
 :root {
     /* Green Discovery Laos Inspired Colors */
-    --primary: #4c5d63;
+    --primary: #828586;
     /* Deep Forest Green */
-    --primary-light: #16db6f;
+    --primary-light: #007a48;
     /* Lighter Green for hovers */
-    --secondary: #0dc01f;
+    --secondary: #fcb900;
     /* Vibrant Yellow/Orange Accent */
     --secondary-hover: #e0a800;
 
@@ -263,17 +263,10 @@ body.zh-font {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 24px;
     height: var(--header-height);
     max-width: var(--container-width);
     margin: 0 auto;
-}
-
-.logo-block {
-    display: flex;
-    align-items: center;
-    max-height: 100%;
-    /* Prevents the logo from pushing the header wider */
 }
 
 .logo {
@@ -293,28 +286,9 @@ body.zh-font {
 }
 
 .logo-icon {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     fill: var(--primary);
-}
-
-/* ປັບແຕ່ງຮູບພາບໃນ Class logo */
-.logo img {
-    height: 60px;
-    /* ປ່ຽນຕົວເລກນີ້ຕາມຄວາມເໝາະສົມຂອງ Header ຂອງທ່ານ */
-    width: auto;
-    vertical-align: middle;
-    margin-right: 20px;
-    /* ໄລຍະຫ່າງລະຫວ່າງຮູບ ກັບ ຕົວໜັງສື */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.5rem;
-    /* ປັບຂະໜາດຕົວໜັງສື LuangPrabang Smile Trip */
-    font-weight: bold;
 }
 
 .main-nav ul {
