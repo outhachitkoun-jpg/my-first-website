@@ -132,6 +132,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    // Header Scroll Effect
+    const siteHeader = document.querySelector('.site-header');
+    if (siteHeader) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                siteHeader.classList.add('scrolled');
+            } else {
+                siteHeader.classList.remove('scrolled');
+            }
+        });
+    }
 });
 
 // Object to store slide indices and intervals for each tour

@@ -4,257 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Laos - All Things You Need to Know | Luangprabang Smile Trip</title>
+    <title>About Laos - All Things You Need to Know | Laos Smile Trip</title>
     <meta name="description"
         content="The ultimate travel guide to Laos. Discover 15 essential things to know before visiting, including history, culture, best time to visit, and local etiquette.">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .laos-hero {
-            height: 45vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about laos/Laos-In-style-1.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            border-bottom-left-radius: 40px;
-            border-bottom-right-radius: 40px;
-        }
 
-        .breadcrumb {
-            padding: 1.5rem 0;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        .breadcrumb a {
-            color: var(--primary);
-            font-weight: 500;
-        }
-
-        .breadcrumb span {
-            margin: 0 10px;
-            opacity: 0.5;
-        }
-
-        .guide-section {
-            padding: 4rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--secondary);
-            border-radius: 2px;
-        }
-
-        .travel-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 3rem;
-        }
-
-        .travel-point {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 24px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .travel-point:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-            border-color: var(--secondary);
-        }
-
-        .point-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: var(--primary);
-            color: white;
-            border-radius: 10px;
-            font-weight: 800;
-            font-family: 'Oswald', sans-serif;
-            margin-bottom: 1rem;
-        }
-
-        .travel-point h3 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin: 0;
-        }
-
-        .travel-point p {
-            color: #555;
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-
-        .visual-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 1rem;
-        }
-
-        .etiquette-box {
-            background: #fdfaf3;
-            border: 2px dashed #e5d5b7;
-            padding: 2.5rem;
-            border-radius: 24px;
-            margin-top: 4rem;
-        }
-
-        .etiquette-box h3 {
-            color: #8b6e3f;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 1.5rem;
-        }
-
-        .fact-bubble {
-            display: inline-block;
-            background: #eef2ff;
-            color: #4338ca;
-            padding: 5px 15px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .currency-demo {
-            background: #f0fff4;
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 5px solid #48bb78;
-            margin-top: 1rem;
-        }
-
-        .highlights-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .highlights-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-
-        .highlights-list li:last-child {
-            border: none;
-        }
-
-        .highlights-list li strong {
-            color: var(--primary);
-        }
-
-        .national-data {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 0;
-            margin: 4rem 0;
-            border-radius: 40px;
-        }
-
-        .national-data-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .data-item .val {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: 800;
-            font-family: 'Oswald', sans-serif;
-            color: var(--secondary);
-        }
-
-        .data-item .label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .laos-hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .travel-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .national-data {
-                border-radius: 0;
-                margin-left: -24px;
-                margin-right: -24px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
     <header class="site-header">
-        <div class="top-bar">
-            <div class="container top-bar-inner">
-                <div class="top-bar-item top-bar-contact">
-                    <svg class="top-bar-icon" viewBox="0 0 24 24">
-                        <path
-                            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                    </svg>
-                    <a href="tel:+8562098457614"><span class="contact-value">+856 20 9845 7614</span></a>
-                </div>
-                <div class="top-bar-item top-bar-contact">
-                    <svg class="top-bar-icon" viewBox="0 0 24 24">
-                        <path
-                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
-                    <a href="mailto:LuangprabangSmileTrip@gmail.com"><span
-                            class="contact-value">LuangprabangSmileTrip@gmail.com</span></a>
-                </div>
-                <div class="lang-switcher">
-                    <a href="#" class="lang-btn active" id="lang-en">EN</a>
-                    <a href="#" class="lang-btn" id="lang-lo">ລາວ</a>
-                </div>
-            </div>
-        </div>
         <div class="container nav-bar">
-            <a href="index.html" class="logo">Luangprabang <span>Smile Trip</span></a>
+            <a href="index.html" class="logo">
+                <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
+            </a>
             <a href="#main-nav" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -264,17 +27,16 @@
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
                     <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
-                    <li><a href="packages.html" data-i18n="nav_packages">Packages</a></li>
-                    <li><a href="tickets.html" data-i18n="nav_tickets">Tickets</a></li>
-                    <li><a href="railway.html">Railway</a></li>
-                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                    <li><a href="rentals.html" data-i18n="nav_rentals">Rentals</a></li>
                     <li><a href="laos.html" class="active" data-i18n="nav_laos">Laos</a></li>
-                    <li><a href="index.html#support" data-i18n="nav_support">Support</a></li>
+
                     <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <div class='nav-overlay'></div>
 
     <section class="laos-hero">
         <div class="container">
@@ -290,7 +52,7 @@
         </div>
 
         <section class="guide-section">
-            <div class="section-header">
+            <div class="section-header readable-content">
                 <h2>Traveler's Essential Guide</h2>
                 <p>Laos is one of the least explored countries in Southeast Asia, offering mystical landscapes, diverse
                     cultures, and authentic local life.</p>
@@ -461,16 +223,16 @@
         <!-- New Railway Call to Action -->
         <section class="info-section"
             style="text-align: center; background: #f0f7ff; border-radius: 30px; padding: 3rem;">
-            <h2 class="section-title" style="margin-bottom: 1rem;">Experience the Modern Way to Travel</h2>
-            <p style="margin-bottom: 2rem;">The Laos-China Railway is the fastest way to travel between Vientiane, Vang
-                Vieng, and Luang Prabang.</p>
-            <a href="railway.html" class="btn">View Railway Guide & Timetable</a>
+            <h2 class="section-title" style="margin-bottom: 1rem;">Explore Luang Prabang at Your Own Pace</h2>
+            <p style="margin-bottom: 2rem;">Rent a car or motorbike to discover hidden gems around the town and beyond.
+            </p>
+            <a href="rentals.html" class="btn">View Rental Options</a>
         </section>
     </main>
     <!-- Deep Dive National Facts (Previous Content Integrated) -->
     <section class="national-data reveal">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header readable-content">
                 <h2 style="color: white; border-color: var(--secondary);">National Overview</h2>
                 <p style="color: rgba(255,255,255,0.7);">Key statistics and facts about the Lao People's
                     Democratic Republic</p>
@@ -506,32 +268,32 @@
             has evolved into a key member of ASEAN and the WTO.</p>
     </div>
     <div style="text-align: center; margin-top: 3rem;">
-        <a href="railway.html" class="btn">View Railway Guide & Timetable</a>
+        <a href="rentals.html" class="btn">View Rental Options</a>
     </div>
     </section>
 
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <h3>Luangprabang Smile Trip</h3>
+                <img src="images/logo93.png" alt="Laos Smile Trip" class="footer-logo">
                 <p>Your local experts for an unforgettable journey through the heart of Laos.</p>
             </div>
             <div class="footer-col">
                 <h3>Quick Links</h3>
                 <p><a href="index.html">Home</a></p>
                 <p><a href="tours.html">Our Tours</a></p>
-                <p><a href="packages.html">Tour Packages</a></p>
+                <p><a href="rentals.html">Rentals</a></p>
                 <p><a href="laos.html">Essential Guide</a></p>
             </div>
             <div class="footer-col">
                 <h3>Contact Us</h3>
                 <p>Phone: +856 20 9845 7614</p>
-                <p>Email: LuangprabangSmileTrip@gmail.com</p>
+                <p>Email: LaosSmileTrip@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom"
             style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
-            <p>&copy; 2026 Luangprabang Smile Trip. All rights reserved.</p>
+            <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
         </div>
     </footer>
 
@@ -542,7 +304,6 @@
         </svg>
     </a>
 
-    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 

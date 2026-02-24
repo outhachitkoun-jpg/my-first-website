@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car & Motorbike Rental | Laos Smile Trip</title>
+    <meta name="description"
+        content="Rent a car or motorbike in Luang Prabang with Laos Smile Trip. We offer a wide range of vehicles for your convenience and exploration.">
+    <meta name="keywords"
+        content="car rental luang prabang, motorbike rental luang prabang, rent car laos, rent scooter luang prabang">
+    <meta name="author" content="Laos Smile Trip">
+    <link rel="canonical" href="rentals.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Laos Smile Trip">
+    <meta property="og:title" content="Car & Motorbike Rental | Laos Smile Trip">
+    <meta property="og:description"
+        content="Easy booking for car and motorbike rentals in Luang Prabang. Reliable vehicles and local support.">
+    <meta property="og:url" content="rentals.html">
+    <meta property="og:image" content="images/tours/heritage/1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container nav-bar">
+            <div class="logo-block">
+                <a href="index.html" class="logo">
+                    <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
+                </a>
+            </div>
+            <a href="#main-nav" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+                    <li><a href="rentals.html" class="active" data-i18n="nav_rentals">Rentals</a></li>
+                    <li><a href="laos.html" data-i18n="nav_laos">Laos</a></li>
+
+                    <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-overlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="tickets-hero">
+            <div class="container">
+                <h1 data-i18n="rentals_title">Car & Motorbike Rental</h1>
+                <p style="font-size: 1.2rem; opacity: 0.9;">Explore Luang Prabang at your own pace with our reliable
+                    rental vehicles.</p>
+            </div>
+        </section>
+
+        <!-- Rental Selection Section -->
+        <section class="ticket-section container">
+            <div class="ticket-type-tabs">
+                <button class="tab-btn active" onclick="showTab('motorbike')">🛵 Motorbikes</button>
+                <button class="tab-btn" onclick="showTab('car')">🚗 Cars</button>
+            </div>
+
+            <!-- Motorbike Rentals -->
+            <div id="motorbike-rentals" class="ticket-grid active">
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <h3>Honda Click 125i</h3>
+                        <span class="ticket-price">From $12/day</span>
+                    </div>
+                    <div class="ticket-body">
+                        <p>Automatic scooter, perfect for city exploration and nearby waterfalls.</p>
+                        <ul class="ticket-features">
+                            <li>Manual/Auto: Automatic</li>
+                            <li>Engine: 125cc</li>
+                            <li>Includes: 2 Helmets</li>
+                        </ul>
+                        <a href="#booking-form" class="btn book-btn"
+                            onclick="selectTicket('Motorbike: Honda Click 125i')">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <h3>Honda Wave 110</h3>
+                        <span class="ticket-price">From $10/day</span>
+                    </div>
+                    <div class="ticket-body">
+                        <p>Semi-automatic, reliable and fuel-efficient for all terrains.</p>
+                        <ul class="ticket-features">
+                            <li>Manual/Auto: Semi-Auto</li>
+                            <li>Engine: 110cc</li>
+                            <li>Includes: 2 Helmets</li>
+                        </ul>
+                        <a href="#booking-form" class="btn book-btn"
+                            onclick="selectTicket('Motorbike: Honda Wave 110')">Rent Now</a>
+                    </div>
+                </div>
+
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <h3>Dirt Bike 250cc</h3>
+                        <span class="ticket-price">From $35/day</span>
+                    </div>
+                    <div class="ticket-body">
+                        <p>For the adventurous. Explore the rugged mountains around Luang Prabang.</p>
+                        <ul class="ticket-features">
+                            <li>Manual/Auto: Manual</li>
+                            <li>Engine: 250cc</li>
+                            <li>Includes: Pro Helmet</li>
+                        </ul>
+                        <a href="#booking-form" class="btn book-btn"
+                            onclick="selectTicket('Motorbike: Dirt Bike 250cc')">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Rentals -->
+            <div id="car-rentals" class="ticket-grid">
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <h3>SUV with Driver</h3>
+                        <span class="ticket-price">From $60/day</span>
+                    </div>
+                    <div class="ticket-body">
+                        <p>Comfortable SUV for families or groups. Includes professional local driver.</p>
+                        <ul class="ticket-features">
+                            <li>Capacity: 4-7 Passengers</li>
+                            <li>Air Conditioned: Yes</li>
+                            <li>Includes: Fuel & Driver</li>
+                        </ul>
+                        <a href="#booking-form" class="btn book-btn" onclick="selectTicket('Car: SUV with Driver')">Rent
+                            Now</a>
+                    </div>
+                </div>
+
+                <div class="ticket-card">
+                    <div class="ticket-header">
+                        <h3>Minivan (Hyundai H1)</h3>
+                        <span class="ticket-price">From $80/day</span>
+                    </div>
+                    <div class="ticket-body">
+                        <p>Perfect for larger groups. Spacious and comfortable with driver.</p>
+                        <ul class="ticket-features">
+                            <li>Capacity: up to 12 Passengers</li>
+                            <li>Air Conditioned: Yes</li>
+                            <li>Includes: Driver</li>
+                        </ul>
+                        <a href="#booking-form" class="btn book-btn"
+                            onclick="selectTicket('Car: Minivan Hyundai H1')">Rent Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-form" class="booking-section">
+            <div class="container">
+                <div class="plan-form">
+                    <h2 data-i18n="book_your_rental">Book Your Rental</h2>
+                    <p class="form-instruction" data-i18n="form_instruction">Fill out the form below to book your
+                        rental. We will contact you to confirm the details and payment.</p>
+
+                    <form onsubmit="submitBooking(event)">
+                        <div class="plan-form__grid">
+                            <div class="plan-form__field">
+                                <label data-i18n="selected_ticket">Selected Vehicle</label>
+                                <input type="text" id="selected-ticket-input" placeholder="Select a vehicle above..."
+                                    readonly required>
+                            </div>
+                            <div class="plan-form__field">
+                                <label data-i18n="travel_date">Rental Date</label>
+                                <input type="date" id="travel-date" required>
+                            </div>
+                            <div class="plan-form__field">
+                                <label data-i18n="guests">Number of Days</label>
+                                <input type="number" id="day-count" min="1" value="1" required>
+                            </div>
+                            <div class="plan-form__field">
+                                <label data-i18n="full_name">Full Name</label>
+                                <input type="text" id="customer-name" placeholder="Your Name" required>
+                            </div>
+                            <div class="plan-form__field">
+                                <label data-i18n="email_address">Email Address</label>
+                                <input type="email" id="customer-email" placeholder="your@email.com" required>
+                            </div>
+                            <div class="plan-form__field">
+                                <label data-i18n="phone_number">WhatsApp / Phone</label>
+                                <input type="tel" id="customer-phone" placeholder="+856 ..." required>
+                            </div>
+                            <div class="plan-form__field plan-form__field--wide">
+                                <label data-i18n="special_requests">Special Requests / Notes</label>
+                                <textarea id="customer-notes" rows="3"
+                                    placeholder="Any specific requirements..."></textarea>
+                            </div>
+                            <div class="plan-form__actions">
+                                <button type="submit" class="btn btn-booking" data-i18n="request_booking">Request
+                                    Booking</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <img src="images/logo93.png" alt="Laos Smile Trip" class="footer-logo">
+                <p>Your trusted local partner for unforgettable adventures in Luang Prabang.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="tours.html">Our Tours</a></p>
+                <p><a href="rentals.html">Rentals</a></p>
+                <p><a href="about.html">About</a></p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p>Phone: +856 20 9845 7614</p>
+                <p>Email: LaosSmileTrip@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a class="whatsapp-float" href="https://wa.me/8562098457614" target="_blank" rel="noopener">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+            <path
+                d="M16.003 2.667c-7.363 0-13.333 5.97-13.333 13.333 0 2.35.613 4.646 1.781 6.674L2.667 29.333l6.84-1.76c1.96 1.07 4.17 1.63 6.493 1.63 7.364 0 13.333-5.97 13.333-13.333s-5.969-13.333-13.333-13.333zm0 24c-2.073 0-4.1-.523-5.897-1.514l-.423-.239-4.06 1.046 1.083-3.951-.275-.406c-1.112-1.646-1.699-3.563-1.699-5.478 0-5.546 4.514-10.06 10.06-10.06s10.06 4.514 10.06 10.06-4.514 10.06-10.06 10.06zm5.523-7.526c-.302-.151-1.79-.883-2.068-.984-.278-.101-.48-.151-.681.151-.201.302-.782.984-.959 1.186-.177.201-.353.227-.655.076-.302-.151-1.275-.471-2.429-1.503-.898-.8-1.503-1.789-1.68-2.091-.177-.302-.019-.466.133-.617.137-.136.302-.353.453-.53.151-.177.201-.302.302-.504.101-.201.051-.378-.025-.529-.076-.151-.681-1.64-.933-2.247-.245-.587-.494-.508-.681-.517-.176-.008-.378-.01-.58-.01-.201 0-.53.076-.806.378-.277.302-1.057 1.032-1.057 2.515 0 1.483 1.081 2.914 1.232 3.117.151.201 2.129 3.252 5.164 4.558.722.312 1.284.498 1.722.639.723.23 1.38.197 1.9.119.579-.086 1.79-.731 2.043-1.437.252-.706.252-1.31.176-1.437-.076-.126-.277-.201-.58-.353z" />
+        </svg>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        function showTab(type) {
+            // Hide all tab contents
+            document.querySelectorAll('.ticket-grid').forEach(grid => {
+                grid.classList.remove('active');
+            });
+            // Remove active class from buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            if (type === 'motorbike') {
+                document.getElementById('motorbike-rentals').classList.add('active');
+                document.querySelectorAll('.tab-btn')[0].classList.add('active');
+            } else {
+                document.getElementById('car-rentals').classList.add('active');
+                document.querySelectorAll('.tab-btn')[1].classList.add('active');
+            }
+        }
+
+        function selectTicket(vehicleName) {
+            document.getElementById('selected-ticket-input').value = vehicleName;
+            // Smooth scroll to form
+            document.getElementById('booking-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function submitBooking(event) {
+            event.preventDefault();
+            const vehicle = document.getElementById('selected-ticket-input').value;
+            const date = document.getElementById('travel-date').value;
+            const days = document.getElementById('day-count').value;
+            const name = document.getElementById('customer-name').value;
+            const email = document.getElementById('customer-email').value;
+            const phone = document.getElementById('customer-phone').value;
+            const notes = document.getElementById('customer-notes').value;
+
+            if (!vehicle || !date || !days || !name || !email || !phone) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const message = `Hello Laos Smile Trip Team,%0A%0AI would like to book a rental vehicle.%0A%0A🚗 Vehicle: ${encodeURIComponent(vehicle)}%0A📅 Date: ${encodeURIComponent(date)}%0A⏱️ Days: ${encodeURIComponent(days)}%0A%0A👤 Contact Details:%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0A📝 Notes: ${encodeURIComponent(notes)}%0A%0APlease confirm availability and price.`;
+
+            window.open(`https://wa.me/8562098457614?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+
+</html>
