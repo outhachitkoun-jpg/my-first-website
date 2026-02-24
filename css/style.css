@@ -2194,3 +2194,158 @@ footer {
     font-size: 0.8rem;
     opacity: 0.8;
 }
+/* ========================================
+   2026 ESSENTIAL TRAVELER INFO SECTION
+   ======================================== */
+
+.update-2026-section {
+    position: relative;
+}
+
+.update-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+}
+
+.update-card {
+    border-left: 4px solid var(--primary) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%) !important;
+}
+
+.update-card .point-number {
+    background: var(--primary);
+    color: var(--primary) !important;
+    opacity: 0.08;
+    font-size: 3.5rem;
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.update-alert {
+    background: linear-gradient(135deg, #fff3cd, #ffeeba);
+    border: 1px solid #ffc107;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.2rem;
+}
+
+.update-alert strong {
+    display: block;
+    color: #856404;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.update-alert p {
+    margin: 0;
+    color: #6c5700;
+    font-size: 0.9rem;
+}
+
+/* Festival Table */
+.festival-table-wrap {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.festival-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.95rem;
+}
+
+.festival-table thead tr {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark, #1a6e4a));
+    color: white;
+}
+
+.festival-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.festival-table tbody tr {
+    border-bottom: 1px solid #e9ecef;
+    transition: background 0.2s ease;
+}
+
+.festival-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.festival-table tbody tr:hover {
+    background: #f0f7ff;
+}
+
+.festival-table td {
+    padding: 0.9rem 1.25rem;
+    color: #444;
+    vertical-align: middle;
+}
+
+.festival-table td:nth-child(2) {
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.festival-card {
+    grid-column: 1 / -1;
+}
+
+/* Pro-Tip Quote Box */
+.pro-tip-box {
+    background: linear-gradient(135deg, #f8f9fa, #e8f4fd);
+    border-left: 5px solid var(--primary);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.pro-tip-box blockquote {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+    font-style: normal;
+}
+
+.pro-tip-box blockquote em {
+    color: var(--primary);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .festival-table th,
+    .festival-table td {
+        padding: 0.75rem 0.8rem;
+        font-size: 0.82rem;
+    }
+
+    .pro-tip-box {
+        padding: 1.5rem;
+    }
+
+    .festival-card {
+        grid-column: 1;
+    }
+}
