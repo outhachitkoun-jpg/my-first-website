@@ -525,10 +525,15 @@ body.lao-font {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.85;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
     filter: contrast(1.1) brightness(0.8);
     /* Cinematic Look */
     animation: zoomIn 25s ease-in-out infinite alternate;
+}
+
+.hero-slide img.active {
+    opacity: 0.85;
 }
 
 @keyframes zoomIn {
@@ -2348,4 +2353,67 @@ footer {
     .festival-card {
         grid-column: 1;
     }
+}
+
+/* ========================================
+   HOMEPAGE 2026 WELCOME SECTION
+   ======================================== */
+
+.welcome-2026 {
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+    padding: 100px 0;
+}
+
+.welcome-2026 .section-title {
+    margin-bottom: 2rem;
+}
+
+.why-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease;
+    border: 1px solid #f1f5f9;
+}
+
+.why-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-soft);
+}
+
+/* ========================================
+   LAOS GUIDE 2026 UPDATES
+   ======================================== */
+
+.quick-facts-container {
+    background: white;
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+    border: 1px solid #f1f5f9;
+}
+
+.fact-card-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.fact-card-header h3 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.fact-card-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.safety-item {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(246, 173, 85, 0.2);
 }
