@@ -36,6 +36,15 @@ document.addEventListener('DOMContentLoaded', function () {
         flag.addEventListener('click', function (e) {
             e.preventDefault();
             const lang = this.getAttribute('data-lang');
+
+            // Update UI for the dropdown trigger
+            const currentImg = document.querySelector('.lang-current img');
+            const currentText = document.querySelector('.lang-current span');
+            const selectedImg = this.querySelector('img');
+
+            if (currentImg && selectedImg) currentImg.src = selectedImg.src;
+            if (currentText) currentText.textContent = lang.toUpperCase();
+
             window.translateLanguage(lang);
         });
     });
