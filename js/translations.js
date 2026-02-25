@@ -74,7 +74,11 @@ const translations = {
         "about_team_title": "Local Hospitality",
         "about_team_para": "From our family-run Villa Kingkham Riverside to our expert-led jungle tours, we provide a deeply personal touch that only true locals can offer.",
         "about_workshop_title": "Artisan Commitment",
-        "about_workshop_para": "Our new Eco-Printing workshop in Ban Pongvan Village is part of our dedication to preserving Lao heritage and supporting rural artisan communities."
+        "about_workshop_para": "Our new Eco-Printing workshop in Ban Pongvan Village is part of our dedication to preserving Lao heritage and supporting rural artisan communities.",
+        "mekong_cruise_title": "Slow Boat Mekong 2-Day Up Cruise",
+        "tour_overview": "Tour Overview",
+        "pak_ou_kuang_si_title": "Pak Ou Caves & Kuang Si Falls",
+        "pak_ou_kuang_si_overview": "Explore the spiritual Pak Ou Caves and the turquoise Kuang Si Falls in one incredible day."
     },
     lo: {
         "nav_home": "ໜ້າທຳອິດ",
@@ -151,7 +155,11 @@ const translations = {
         "about_team_title": "ການບໍລິການແບບທ້ອງຖິ່ນ",
         "about_team_para": "ຈາກ Villa Kingkham Riverside ທີ່ບໍລິຫານແບບຄອບຄົວ ຈົນເຖິງການນຳທ່ຽວປ່າໂດຍຊ່ຽວຊານ, ພວກເຮົາມອບການບໍລິການທີ່ເປັນກັນເອງເຊິ່ງມີພຽງແຕ່ຄົນທ້ອງຖິ່ນແທ້ໆເທົ່ານັ້ນທີ່ສາມາດມອບໃຫ້ໄດ້.",
         "about_workshop_title": "ຄວາມມຸ່ງໝັ້ນຕໍ່ຊ່າງຝີມື",
-        "about_workshop_para": "ໂຮງເຝິກອົບຮົມ Eco-Printing ໃໝ່ຂອງພວກເຮົາທີ່ບ້ານປ່ອງວັນ ແມ່ນສ່ວນໜຶ່ງຂອງຄວາມມຸ່ງໝັ້ນໃນການຮັກສາມໍລະດົກລາວ ແລະ ສະໜັບສະໜູນຊຸມຊົນຊ່າງຝີມືໃນຊົນນະບົດ."
+        "about_workshop_para": "ໂຮງເຝິກອົບຮົມ Eco-Printing ໃໝ່ຂອງພວກເຮົາທີ່ບ້ານປ່ອງວັນ ແມ່ນສ່ວນໜຶ່ງຂອງຄວາມມຸ່ງໝັ້ນໃນການຮັກສາມໍລະດົກລາວ ແລະ ສະໜັບສະໜູນຊຸມຊົນຊ່າງຝີມືໃນຊົນນະບົດ.",
+        "mekong_cruise_title": "ທົວເຮືອຊ້າແມ່ນ້ຳຂອງ 2 ວັນ (ຂຶ້ນ)",
+        "tour_overview": "ພາບລວມຂອງທົວ",
+        "pak_ou_kuang_si_title": "ທົວຖ້ຳປາກອູ ແລະ ຕາດກວາງຊີ",
+        "pak_ou_kuang_si_overview": "ສຳຫຼວດຖ້ຳປາກອູທີ່ສັກສິດ ແລະ ນ້ຳຕົກຕາດກວາງຊີທີ່ສວຍງາມໃນມື້ດຽວ."
     }
 };
 
