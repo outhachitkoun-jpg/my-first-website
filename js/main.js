@@ -17,6 +17,12 @@ window.translateLanguage = function (lang) {
     // Save preference
     localStorage.setItem('preferredLanguage', lang);
 
+    // Handle Body Classes for Language-Specific Styling (Readability)
+    document.body.classList.remove('lao-font');
+    if (lang === 'lo') {
+        document.body.classList.add('lao-font');
+    }
+
     const selectElement = document.querySelector('.goog-te-combo');
     if (selectElement) {
         selectElement.value = lang;
@@ -290,17 +296,12 @@ document.addEventListener('DOMContentLoaded', function () {
         botContainer.className = 'whatsapp-bot-container';
         botContainer.id = 'whatsapp-bot';
 
-        const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-        const greeting = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang].bot_greeting : "Sabaidee! 🙏 How can I help you today?";
-        const status = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang].bot_status : "Online";
-        const btnText = (typeof translations !== 'undefined' && translations[currentLang]) ? translations[currentLang].bot_button : "Chat on WhatsApp";
-
         botContainer.innerHTML = `
             <div class="bot-header">
                 <div class="bot-avatar">🤖</div>
                 <div class="bot-info">
                     <h4>Smile Bot</h4>
-                    <span data-i18n="bot_status">${status}</span>
+                    <span>Online</span>
                 </div>
                 <button class="bot-close" id="bot-close">&times;</button>
             </div>
@@ -312,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <svg width="20" height="20" viewBox="0 0 32 32" fill="white">
                         <path d="M16.003 2.667c-7.363 0-13.333 5.97-13.333 13.333 0 2.35.613 4.646 1.781 6.674L2.667 29.333l6.84-1.76c1.96 1.07 4.17 1.63 6.493 1.63 7.364 0 13.333-5.97 13.333-13.333s-5.969-13.333-13.333-13.333zm0 24c-2.073 0-4.1-.523-5.897-1.514l-.423-.239-4.06 1.046 1.083-3.951-.275-.406c-1.112-1.646-1.699-3.563-1.699-5.478 0-5.546 4.514-10.06 10.06-10.06s10.06 4.514 10.06 10.06-4.514 10.06-10.06 10.06zm5.523-7.526c-.302-.151-1.79-.883-2.068-.984-.278-.101-.48-.151-.681.151-.201.302-.782.984-.959 1.186-.177.201-.353.227-.655.076-.302-.151-1.275-.471-2.429-1.503-.898-.8-1.503-1.789-1.68-2.091-.177-.302-.019-.466.133-.617.137-.136.302-.353.453-.53.151-.177.201-.302.302-.504.101-.201.051-.378-.025-.529-.076-.151-.681-1.64-.933-2.247-.245-.587-.494-.508-.681-.517-.176-.008-.378-.01-.58-.01-.201 0-.53.076-.806.378-.277.302-1.057 1.032-1.057 2.515 0 1.483 1.081 2.914 1.232 3.117.151.201 2.129 3.252 5.164 4.558.722.312 1.284.498 1.722.639.723.23 1.38.197 1.9.119.579-.086 1.79-.731 2.043-1.437.252-.706.252-1.31.176-1.437-.076-.126-.277-.201-.58-.353z" />
                     </svg>
-                    <span data-i18n="bot_button">${btnText}</span>
+                    <span>Chat on WhatsApp</span>
                 </a>
             </div>
         `;
@@ -351,12 +352,11 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             // First message
-            addMessage(greeting, true, 1500);
+            addMessage("Sabaidee! 🙏 Welcome to Laos Smile Trip. How can I help you today?", true, 1500);
 
             // Second message after 4 seconds
             setTimeout(() => {
-                const secondMsg = currentLang === 'lo' ? "ພວກເຮົາພ້ອມໃຫ້ຄຳປຶກສາການທ່ອງທ່ຽວຕະຫຼອດ 24 ຊົ່ວໂມງ!" : "We're here to help you plan your perfect Laos trip 24/7!";
-                addMessage(secondMsg, true, 1500);
+                addMessage("We're here to help you plan your perfect Laos trip 24/7!", true, 1500);
             }, 4000);
 
         }, 5000);
