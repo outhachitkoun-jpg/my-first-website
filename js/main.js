@@ -1,81 +1,12 @@
-// Google Translate Initialization & Persistence
-window.googleTranslateElementInit = function () {
-    if (window.googleTranslateElementInitDone) return;
-    new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,lo,th,fr,ja',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-    }, 'google_translate_element');
-    window.googleTranslateElementInitDone = true;
-};
-
-window.translateLanguage = function (lang) {
-    if (!lang) return;
-    console.log("Translation requested for:", lang);
-
-    // Save preference
-    localStorage.setItem('preferredLanguage', lang);
-
-    // Handle Body Classes for Language-Specific Styling (Readability)
-    document.body.classList.remove('lao-font');
-    if (lang === 'lo') {
-        document.body.classList.add('lao-font');
-    }
-
-    const selectElement = document.querySelector('.goog-te-combo');
-    if (selectElement) {
-        selectElement.value = lang;
-        // Standard change event
-        selectElement.dispatchEvent(new Event('change', { bubbles: true }));
-
-        // Brute force triggers for different Google Translate implementations
-        ['change', 'click', 'input', 'blur'].forEach(evtName => {
-            const event = new Event(evtName, { bubbles: true });
-            selectElement.dispatchEvent(event);
-        });
-
-        console.log("Events dispatched for:", lang);
-    } else {
-        // Load Google Translate script if it's not present
-        if (!document.querySelector('script[src*="translate_a/element.js"]')) {
-            const script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-            document.body.appendChild(script);
-        }
-
-        // Wait and retry
-        setTimeout(() => window.translateLanguage(lang), 500);
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Language Flag Click Handler (Dropdown)
-    const langFlags = document.querySelectorAll('.lang-flag');
-    langFlags.forEach(flag => {
-        flag.addEventListener('click', function (e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
 
-            // Update UI for the dropdown trigger
-            const currentImg = document.querySelector('.lang-current img');
-            const currentText = document.querySelector('.lang-current span');
-            const selectedImg = this.querySelector('img');
-
-            if (currentImg && selectedImg) currentImg.src = selectedImg.src;
-            if (currentText) currentText.textContent = lang.toUpperCase();
-
-            window.translateLanguage(lang);
-        });
-    });
-
-    // Auto-apply saved language
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && savedLang !== 'en') {
-        // Wait a bit for everything to settle
-        setTimeout(() => window.translateLanguage(savedLang), 1000);
-    }
+    // Show WhatsApp bot after 1 minute
+    setTimeout(() => {
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        if (whatsappBtn) {
+            whatsappBtn.classList.add('show');
+        }
+    }, 60000); // 1 minute delay
 
     // Initialize specific tour if needed (optional)
     // Initialize Hero Slider

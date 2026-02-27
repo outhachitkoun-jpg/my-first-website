@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Laos - All Things You Need to Know | Laos Smile Trip</title>
+    <title>Discover Laos | Laos Smile Trip - Travel Guide 2026</title>
     <meta name="description"
-        content="The ultimate travel guide to Laos. Discover 15 essential things to know before visiting, including history, culture, best time to visit, and local etiquette.">
+        content="Explore the heart of Southeast Asia. A premium traveler's guide to Laos, covering culture, transit, and essential tips for 2026.">
     <link rel="stylesheet" href="css/style.css">
-
+    <script src="js/i18n.js" defer></script>
 </head>
 
 <body>
-
     <header class="site-header">
         <div class="container nav-bar">
-            <a href="index.html" class="logo">
-                <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
-            </a>
+            <div class="logo-block">
+                <a href="index.html" class="logo">
+                    <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
+                </a>
+            </div>
             <a href="#main-nav" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
                 <span></span>
                 <span></span>
@@ -26,550 +27,204 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
-                    <li><a href="rentals.html" data-i18n="nav_rentals">Rentals</a></li>
+                    <li class="has-dropdown">
+                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
+                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
+                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
+                            <li><a href="tours.html">All Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="car-rentals.html">Car Rental</a></li>
+                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
+                            <li><a href="destinations.html">Luang Prabang</a></li>
+                            <li><a href="destinations.html">Vientiane Capital</a></li>
+                            <li><a href="destinations.html">Vang Vieng</a></li>
+                            <li><a href="destinations.html">Pakse (Champasak)</a></li>
+                            <li><a href="destinations.html">Xieng Khouang</a></li>
+                            <li><a href="destinations.html">Savannakhet</a></li>
+                        </ul>
+                    </li>
                     <li><a href="laos.html" class="active" data-i18n="nav_laos">Laos</a></li>
                     <li><a href="eco-dyeing.html" data-i18n="nav_eco_dyeing">Eco-Dyeing</a></li>
-                    <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="#footer" data-i18n="nav_contact">Contact</a></li>
                     <li><a href="about.html" data-i18n="nav_about">About</a></li>
-                    <li class="nav-translate">
-                        <div class="lang-current">
-                            <img src="https://flagcdn.com/w40/gb.png" alt="English">
-                            <span>EN</span>
-                            <i></i>
-                        </div>
-                        <div class="lang-menu">
-                            <a href="#" class="lang-flag" data-lang="en"><img src="https://flagcdn.com/w40/gb.png"
-                                    alt="English"> English</a>
-                            <a href="#" class="lang-flag" data-lang="fr"><img src="https://flagcdn.com/w40/fr.png"
-                                    alt="French"> Français</a>
-                            <a href="#" class="lang-flag" data-lang="ja"><img src="https://flagcdn.com/w40/jp.png"
-                                    alt="Japanese"> 日本語</a>
-                            <a href="#" class="lang-flag" data-lang="lo"><img src="https://flagcdn.com/w40/la.png"
-                                    alt="Lao"> ລາວ</a>
-                            <a href="#" class="lang-flag" data-lang="th"><img src="https://flagcdn.com/w40/th.png"
-                                    alt="Thai"> ไทย</a>
-                        </div>
-                        <div id="google_translate_element"></div>
-                    </li>
                 </ul>
             </nav>
+            <div class="lang-switcher">
+                <div class="lang-dropdown">
+                    <div class="lang-current">
+                        <span id="current-lang-flag">🇺🇸</span>
+                        <span id="current-lang-text">EN</span>
+                        <span class="chevron">▼</span>
+                    </div>
+                    <div class="lang-list">
+                        <button class="lang-btn active" data-lang="en">🇺🇸 English (EN)</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français (FR)</button>
+                        <button class="lang-btn" data-lang="lo">🇱🇦 ລາວ (LO)</button>
+                        <button class="lang-btn" data-lang="ja">🇯🇵 日本語 (JA)</button>
+                        <button class="lang-btn" data-lang="th">🇹🇭 ไทย (TH)</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
-    <div class='nav-overlay'></div>
+    <div class="nav-overlay"></div>
 
-    <section class="laos-hero">
-        <div class="container">
-            <h1 data-i18n="laos_hero_title">Everything About Laos</h1>
-            <p data-i18n="laos_hero_subtitle">15 Essential Things to Know Before Visiting</p>
-        </div>
-    </section>
-
-    <main class="container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> <span>›</span> <a href="about.html">About Us</a> <span>›</span> About Laos
-            Country
-        </div>
-
-        <section class="guide-section">
-            <div class="section-header readable-content">
-                <h2>Traveler's Essential Guide</h2>
-                <p>Laos is one of the least explored countries in Southeast Asia, offering mystical landscapes, diverse
-                    cultures, and authentic local life.</p>
+    <main>
+        <!-- LAOS GUIDE HERO -->
+        <section class="hero guide-hero-new">
+            <div class="hero-slide">
+                <img src="images/about laos/luang-prabang-form-air.jpg" class="hero-bg-img active" alt="Laos Landscape">
             </div>
-
-            <!-- ===== LAOS 2026: AT A GLANCE (QUICK FACTS) ===== -->
-            <div class="quick-facts-container reveal" style="margin-bottom: 4rem;">
-                <div class="fact-card-header">
-                    <h3>🇱🇦 Laos 2026: At a Glance</h3>
-                    <p>"The Land of a Million Elephants & Sustainable Growth"</p>
-                </div>
-                <div class="festival-table-wrap">
-                    <table class="festival-table">
-                        <thead>
-                            <tr>
-                                <th>Category</th>
-                                <th>2026 Official Stat</th>
-                                <th>Why it matters for travelers</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>👥 <strong>Population</strong></td>
-                                <td><strong>7.97 Million</strong></td>
-                                <td>High density of "Young & Local" energy; median age is just 25.</td>
-                            </tr>
-                            <tr>
-                                <td>📈 <strong>GDP Growth</strong></td>
-                                <td><strong>5.5% (Target)</strong></td>
-                                <td>A rapidly developing nation with new luxury & modern transit.</td>
-                            </tr>
-                            <tr>
-                                <td>🌿 <strong>Forest Cover</strong></td>
-                                <td><strong>70%</strong></td>
-                                <td>Asia’s "Green Heart"—perfect for trekking and eco-tours.</td>
-                            </tr>
-                            <tr>
-                                <td>🏘️ <strong>Urbanization</strong></td>
-                                <td><strong>38.9%</strong></td>
-                                <td>Authentic rural life is still the soul of the country.</td>
-                            </tr>
-                            <tr>
-                                <td>😊 <strong>Happiness Rank</strong></td>
-                                <td><strong>Top 5 in SE Asia</strong></td>
-                                <td>Known for the "Bo Pen Nyang" (No Problem) laid-back lifestyle.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="travel-grid">
-                <!-- 1. Location -->
-                <div class="travel-point">
-                    <span class="point-number">01</span>
-                    <h3>Location</h3>
-                    <p>Located in the heart of Southeast Asia, Laos shares borders with Thailand, Myanmar, China,
-                        Vietnam, and Cambodia. It is the only <strong>landlocked country</strong> in the region, with
-                        the Mekong River serving as its primary lifeblood.</p>
-                    <img src="images/about laos/location-of-laos.jpg" class="visual-img" alt="Location of Laos">
-                </div>
-
-                <!-- 2. Time Zone -->
-                <div class="travel-point">
-                    <span class="point-number">02</span>
-                    <h3>Time Zone</h3>
-                    <span class="fact-bubble">GMT +7</span>
-                    <p>Laos operates on UTC+07:00. <br>
-                        • 7 hours ahead of London<br>
-                        • 12 hours ahead of New York<br>
-                        • 3 hours behind Sydney</p>
-                </div>
-
-                <!-- 3. Best Time to Visit -->
-                <div class="travel-point">
-                    <span class="point-number">03</span>
-                    <h3>Best Time to Visit</h3>
-                    <img src="images/about laos/Alms-giving-ceremony-1.jpg" class="visual-img"
-                        alt="Almsgiving in Luang Prabang">
-                    <p>The best period is the <strong>cool dry season (November to February)</strong> with temperatures
-                        under 30°C. Peak heat occurs in April/May (35-40°C), followed by the rainy season from May to
-                        September.</p>
-                </div>
-
-                <!-- 4. Get In & Out -->
-                <div class="travel-point">
-                    <span class="point-number">04</span>
-                    <h3>Get In & Out</h3>
-                    <p>As a landlinked nation, entry is easier than ever. Most travelers arrive via the
-                        <strong>Lao-China Railway</strong> from Kunming (China) or Nong Khai (Thailand), or through
-                        international airports in <strong>Vientiane, Luang Prabang, Savannakhet, and Pakse</strong>.
-                        Popular land crossings also include the Thai-Lao Friendship Bridges and Cambodia (Nong Nok
-                        Khiene).
-                    </p>
-                    <img src="images/about laos/luang-prabang-airport-laos.jpg" class="visual-img"
-                        alt="Luang Prabang Airport">
-                </div>
-
-                <!-- 5. Language -->
-                <div class="travel-point">
-                    <span class="point-number">05</span>
-                    <h3>Language</h3>
-                    <p>The official language is <strong>Lao</strong>, closely related to Thai. While French was
-                        historical, English is now more common in tourist areas. In the North, Mandarin and ethnic
-                        minority languages are also widely spoken.</p>
-                    <img src="images/about laos/Laos-language1.jpg" class="visual-img" alt="Lao Language">
-                </div>
-
-                <!-- 6. Currency & Money -->
-                <div class="travel-point">
-                    <span class="point-number">06</span>
-                    <h3>Currency & Money</h3>
-                    <div class="currency-demo">
-                        <strong>Official Currency: Lao Kip (LAK)</strong>
-                        <p>1 USD ≈ 21,400 LAK (2026 Rate).<br>
-                            <em>Important 2026 Update: New regulations mandate using Lao Kip for most local
-                                transactions. Authorized exchange booths and commercial banks are the safest way to
-                                convert your currency.</em>
-                        </p>
-                        <img src="images/about laos/money-exchange-in-laos.jpg" class="visual-img" alt="Money Exchange">
-                    </div>
-                    <p>While USD and Thai Baht are sometimes used for large ticket items, carrying Kip is essential for
-                        markets and rural areas. ATMs are now widely available in all major cities and tourist hubs like
-                        Luang Prabang.</p>
-                </div>
-
-                <!-- 7. What to Eat -->
-                <div class="travel-point">
-                    <span class="point-number">07</span>
-                    <h3>What to Eat</h3>
-                    <img src="images/about laos/night-market-in-luang-prabang-laos-2.jpg" class="visual-img"
-                        alt="Lao Food Market">
-                    <p>Don't miss <strong>Larb</strong> (the national dish—a spicy meat salad) and <strong>Sticky
-                            Rice</strong> served in traditional bamboo baskets. Beer Lao is the legendary national
-                        drink. French influence remains in the excellent baguettes and pastries found everywhere.</p>
-                </div>
-
-                <!-- 8. Getting Around -->
-                <div class="travel-point">
-                    <span class="point-number">08</span>
-                    <h3>Getting Around</h3>
-                    <p>The <strong>Lao-China Railway (LCR)</strong> has revolutionized travel, connecting Vientiane to
-                        Luang Prabang in just 2 hours. For a classic experience, slow boats on the Mekong remain
-                        popular. <strong>Note:</strong> While the railway is fast, road travel via bus remains scenic
-                        but slow (avg 60km/h).</p>
-                    <img src="images/about laos/laos-travel-car2.jpg" class="visual-img" alt="Travel by Car in Laos">
-                </div>
-
-                <!-- 9. Internet & SIM -->
-                <div class="travel-point">
-                    <span class="point-number">09</span>
-                    <h3>Internet & Connectivity</h3>
-                    <p>4G/5G is now widespread in cities. For the best experience, buy a local SIM or
-                        <strong>eSIM</strong> (Unitel or Lao Telecom) upon arrival. Reliable 5G service is now live in
-                        over 59 districts including Luang Prabang and Vientiane.
-                    </p>
-                    <img src="images/about laos/laos-internet-1.jpg" class="visual-img" alt="Internet in Laos">
-                </div>
-
-                <!-- 10. Electricity -->
-                <div class="travel-point">
-                    <span class="point-number">10</span>
-                    <h3>Electricity</h3>
-                    <span class="fact-bubble">230V | 50Hz</span>
-                    <p>Outlets typically accept <strong>two-prong round or flat</strong> plugs. Universal travel
-                        adapters are recommended for multi-country trips.</p>
-                    <img src="images/about laos/laos-eletric-socket.jpg" class="visual-img"
-                        alt="Electric Sockets in Laos">
-                </div>
-
-                <!-- 11. Visa Info -->
-                <div class="travel-point">
-                    <span class="point-number">11</span>
-                    <h3>Visa & Digital Form</h3>
-                    <p>Most travelers can obtain a <strong>30-day E-visa</strong> online or a Visa on Arrival ($30-$50).
-                        <br><strong>Mandatory for 2026:</strong> All travelers must complete the <strong>Lao Digital
-                            Immigration Form (LDIF)</strong> before entry, replacing the old paper cards.
-                    </p>
-                    <img src="images/about laos/demo-Laos-Visa.jpg" class="visual-img" alt="Laos Visa">
-                </div>
-
-                <!-- 12. Geography Highlights -->
-                <div class="travel-point">
-                    <span class="point-number">12</span>
-                    <h3>Travel Highlights</h3>
-                    <ul class="highlights-list">
-                        <li><strong>Luang Prabang:</strong> UNESCO Spiritual Heart</li>
-                        <li><strong>Vang Vieng:</strong> Adventure & Limestone Karsts</li>
-                        <li><strong>Plain of Jars:</strong> Ancient Megalithic Mysteries</li>
-                        <li><strong>4000 Islands:</strong> Mekong Delta Relaxation</li>
-                    </ul>
-                    <img src="images/about laos/Royal-Palace-Museum-loang-prabang-laos.jpg" class="visual-img"
-                        alt="Royal Palace Museum">
-                </div>
-
-                <!-- 13. Safety -->
-                <div class="travel-point">
-                    <span class="point-number">13</span>
-                    <h3>Safety & UXO</h3>
-                    <p>Laos is very safe with low crime. However, be mindful of unexploded ordnance (UXO) in rural
-                        areas—always follow warning signs and stay on marked paths.</p>
-                </div>
-
-                <!-- 14. Accommodation -->
-                <div class="travel-point">
-                    <span class="point-number">14</span>
-                    <h3>Where to Stay</h3>
-                    <p>Options range from luxury boutique riverside hotels in Luang Prabang to authentic village
-                        homestays. Guesthouses are affordable and offer great local interaction.</p>
-                    <img src="images/about laos/Accommodation-in-laos-1.jpg" class="visual-img"
-                        alt="Accommodation in Laos">
-                </div>
-
-                <!-- 15. Culture & Manners -->
-                <div class="travel-point">
-                    <span class="point-number">15</span>
-                    <h3>Transnational Issues</h3>
-                    <p>Discussions continue regarding the demarcation of borders and islands in the Mekong.
-                        Environmental concerns regarding dam construction on the mainstream Mekong are also a focus for
-                        the Mekong River Commission members.</p>
+            <div class="container hero-content">
+                <div class="hero-glass-box reveal">
+                    <span class="hero-label">🇱🇦 Land of a Million Elephants</span>
+                    <h1 data-i18n="laos_page_title">Discover Laos</h1>
+                    <p data-i18n="laos_page_subtitle">Asia's premier destination for Slow Travel, authentic culture, and
+                        pristine nature.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ===== 2026 ESSENTIAL TRAVELER INFORMATION ===== -->
-        <section class="guide-section update-2026-section" style="margin-top: 3rem;">
-            <div class="section-header readable-content">
-                <span class="update-badge">🆕 2026 Update</span>
-                <h2>Essential Traveler Information for 2026</h2>
-                <p>Laos is evolving fast. Here's everything that's new, updated, and critical for your trip this year.
-                </p>
+        <!-- INTRO GRID -->
+        <section class="modern-welcome reveal" style="padding: 8rem 0;">
+            <div class="container welcome-grid">
+                <div class="welcome-image">
+                    <img src="images/about laos/Alms-giving-ceremony-1.jpg" alt="Alms Giving" class="img-floating">
+                </div>
+                <div class="welcome-text-content">
+                    <h2 data-i18n="laos_vibe_title">The "Bo Pen Nyang" Spirit</h2>
+                    <p class="lead-text" data-i18n="laos_vibe_text">Laos is a land where time feels different. Known for
+                        the legendary "Bo Pen Nyang" philosophy (No Problem), life here is embraced with a gentle pace.
+                    </p>
+                    <p>From the morning alms giving in Luang Prabang to the golden sunsets along the Mekong, every
+                        moment in Laos is an invitation to slow down and reconnect with what truly matters.</p>
+                </div>
             </div>
-
-            <!-- Featured Transport Collage Image -->
-            <div class="update-hero-image"
-                style="margin: 2rem auto 3rem; max-width: 900px; border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.18);">
-                <img src="images/about laos/laos-2026-transport.jpg"
-                    alt="Laos 2026 - Electric BRT, Lao-China Railway & Modern Transport"
-                    style="width: 100%; display: block; object-fit: cover; max-height: 480px;">
-                <p
-                    style="text-align:center; font-size: 0.82rem; color: #888; padding: 0.6rem 1rem; background: #f9f9f9; margin:0;">
-                    ▲ Vientiane's new Electric BRT buses (left) & the Lao-China Railway cutting through karst mountains
-                    (right)
-                </p>
-            </div>
-
-            <div class="travel-grid">
-
-                <!-- NEW 01: LDIF Digital Entry -->
-                <div class="travel-point update-card">
-                    <span class="point-number" style="background: var(--primary);">01</span>
-                    <h3>The New Digital Entry Requirement (LDIF)</h3>
-                    <div class="update-alert">
-                        <strong>📝 Mandatory Step-by-Step for 2026</strong>
-                        <p>Paper cards are gone. Follow these steps for a smooth entry:</p>
-                    </div>
-                    <ul class="highlights-list">
-                        <li><strong>1. Register:</strong> Visit <a href="https://immigration.gov.la" target="_blank"
-                                style="color: var(--primary); font-weight:700;">immigration.gov.la</a> within <strong>3
-                                days</strong> before arrival.</li>
-                        <li><strong>2. The QR Code:</strong> After submitting, save a screenshot or print the <strong>QR
-                                Code</strong> you receive. Each traveler needs their own code.</li>
-                        <li><strong>3. At the Border:</strong> Show your QR code and passport to the immigration
-                            officer. It's fast and efficient!</li>
-                        <li><strong>4. Don't Forget:</strong> You must also complete a digital <strong>Departure
-                                Form</strong> before leaving the country.</li>
-                    </ul>
-                    <img src="images/about laos/demo-Laos-Visa.jpg" class="visual-img"
-                        alt="Lao Digital Immigration Form LDIF Walkthrough">
-                </div>
-
-                <!-- NEW 02: Lao-China Railway -->
-                <div class="travel-point update-card">
-                    <span class="point-number" style="background: var(--primary);">02</span>
-                    <h3>Rail Travel: The Lao-China Railway (LCR)</h3>
-                    <p>The railway is now the <strong>most popular way to travel</strong> across Laos, connecting
-                        Vientiane to Luang Prabang in just 2 hours through breathtaking karst scenery.</p>
-                    <ul class="highlights-list">
-                        <li><strong>Tickets open:</strong> 3 days in advance (domestic) / 14 days (international, e.g.
-                            Vientiane → Kunming)</li>
-                        <li><strong>Official App:</strong> Download <em>"LCR Ticket"</em> on Google Play / App Store.
-                            Requires a local Lao, Thai, or Chinese phone number to register.</li>
-                        <li><strong>Security tip:</strong> Swiss Army knives, large aerosols (sunscreen/shaving cream),
-                            and certain medicines may be confiscated. Arrive at the station <strong>1 hour
-                                early</strong>.</li>
-                    </ul>
-                    <img src="images/about laos/luang-prabang-airport-laos.jpg" class="visual-img"
-                        alt="Lao-China Railway Travel">
-                </div>
-
-                <!-- NEW 03: Electric BRT Vientiane -->
-                <div class="travel-point update-card">
-                    <span class="point-number" style="background: var(--primary);">03</span>
-                    <h3>Vientiane's New Electric BRT</h3>
-                    <p>The capital has modernized its public transport with a new <strong>Bus Rapid Transit
-                            (BRT)</strong> system — eco-friendly, air-conditioned, and efficient.</p>
-                    <ul class="highlights-list">
-                        <li>🚌 <strong>55 new electric buses</strong> serving the city</li>
-                        <li>🗺️ Main lines connect <strong>Chao Anouvong Park</strong>, the <strong>Morning Market
-                                (Talat Sao)</strong>, and <strong>Patuxay</strong></li>
-                        <li>✈️ <strong>2026 Expansion:</strong> Routes now extend to <strong>Wattay International
-                                Airport</strong> and <strong>Vientiane Railway Station</strong> — seamless
-                            airport-to-city transfers</li>
-                    </ul>
-                </div>
-
-                <!-- NEW 04: Festival Calendar -->
-                <div class="travel-point update-card festival-card" style="grid-column: 1 / -1;">
-                    <span class="point-number" style="background: var(--primary);">04</span>
-                    <h3>📅 2026 Festival Calendar</h3>
-                    <p>Plan your trip around these major cultural highlights for 2026:</p>
-                    <div class="festival-table-wrap">
-                        <table class="festival-table">
-                            <thead>
-                                <tr>
-                                    <th>Festival / Event</th>
-                                    <th>Date (2026)</th>
-                                    <th>Location</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>🏛️ <strong>Wat Phou Festival</strong></td>
-                                    <td>Jan 31 – Feb 2</td>
-                                    <td>Champasak</td>
-                                </tr>
-                                <tr>
-                                    <td>🐘 <strong>Elephant Festival</strong></td>
-                                    <td>Feb 9 – Feb 15</td>
-                                    <td>Sayabouly</td>
-                                </tr>
-                                <tr>
-                                    <td>💦 <strong>Lao New Year (Pi Mai)</strong></td>
-                                    <td>April 14 – 16</td>
-                                    <td>Nationwide <em>(Best in Luang Prabang)</em></td>
-                                </tr>
-                                <tr>
-                                    <td>🚀 <strong>Rocket Festival (Bun Bang Fai)</strong></td>
-                                    <td>May 1</td>
-                                    <td>Vientiane / Rural Villages</td>
-                                </tr>
-                                <tr>
-                                    <td>🌕 <strong>That Luang Festival</strong></td>
-                                    <td>November 24</td>
-                                    <td>Vientiane</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <img src="images/about laos/Alms-giving-ceremony-1.jpg" class="visual-img"
-                        alt="Lao Festivals and Cultural Events" style="margin-top:1.5rem;">
-                </div>
-
-                <!-- NEW 05: Sustainability -->
-                <div class="travel-point update-card">
-                    <span class="point-number" style="background: var(--primary);">05</span>
-                    <h3>🌿 Sustainability & 2026 Trends</h3>
-                    <p>Laos is <strong>2026's top destination for eco-conscious travelers</strong>. Following Hin Nam No
-                        National Park's new UNESCO recognition, there is a major push for low-impact tourism.</p>
-                    <ul class="highlights-list">
-                        <li>🎓 <strong>LDC Graduation:</strong> 2026 is the year Laos officially graduates from LDC
-                            status—reflecting growing infrastructure & traveler confidence.</li>
-                        <li>🏡 <strong>Community-Based Tourism:</strong> Homestays in <strong>Nong Khiaw</strong> or
-                            <strong>Muang Ngoy</strong> directly support rural economies.
-                        </li>
-                        <li>🌱 <strong>Green Economy:</strong> Nature-based tourism now contributes to 10% of the
-                            national GDP.</li>
-                    </ul>
-                    <img src="images/about laos/Laos-In-style-1.jpg" class="visual-img" alt="Eco-Tourism in Laos">
-                </div>
-
-                <!-- NEW 06: Safety & Practical Tips 2026 -->
-                <div class="travel-point update-card"
-                    style="grid-column: 1 / -1; background: #fffaf0 !important; border-left: 4px solid #f6ad55 !important;">
-                    <span class="point-number" style="color: #f6ad55 !important;">06</span>
-                    <h3>🛡️ Travel with Confidence: 2026 Safety Tips</h3>
-                    <div class="safety-grid"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
-                        <div class="safety-item">
-                            <h4 style="color: #c05621; margin-bottom: 0.5rem;">🏥 Health & Wellness</h4>
-                            <p style="font-size: 0.9rem;">Stick to reputable brands like <strong>Beer Lao</strong>.
-                                Avoid local distillates unless from licensed sources. Always carry comprehensive
-                                <strong>travel insurance</strong> that includes medical evacuation.
-                            </p>
-                        </div>
-                        <div class="safety-item">
-                            <h4 style="color: #c05621; margin-bottom: 0.5rem;">🚶 UXO Awareness</h4>
-                            <p style="font-size: 0.9rem;">In rural areas (like Plain of Jars), stay on <strong>marked
-                                    paths</strong>. Never touch unknown metal objects. Laos is very safe, but being
-                                mindful of the past is key.</p>
-                        </div>
-                        <div class="safety-item">
-                            <h4 style="color: #c05621; margin-bottom: 0.5rem;">🧘 Cultural Respect</h4>
-                            <p style="font-size: 0.9rem;">Dress modestly (shoulders & knees covered) in temples. The
-                                <strong>"Nop"</strong> greeting is perfect for showing respect. many towns have a
-                                peaceful midnight curfew.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div><!-- /.travel-grid -->
-
-            <!-- Pro-Tip Quote -->
-            <div class="pro-tip-box" style="margin: 2.5rem auto 1rem; max-width: 800px;">
-                <blockquote>
-                    💡 <strong>Pro-Tip for 2026:</strong> <em>"Laos is no longer just a 'stopover' between Thailand and
-                        Vietnam. With the new high-speed rail and a focus on sustainable luxury, it is a world-class
-                        destination for those seeking peace, culture, and untouched nature."</em>
-                </blockquote>
-            </div>
-
         </section>
 
-        <!-- Call to Action -->
-        <section class="info-section"
-            style="text-align: center; background: #f0f7ff; border-radius: 30px; padding: 3rem;">
-            <h2 class="section-title" style="margin-bottom: 1rem;">Explore Luang Prabang at Your Own Pace</h2>
-            <p style="margin-bottom: 2rem;">Rent a car or motorbike to discover hidden gems around the town and beyond.
-            </p>
-            <a href="rentals.html" class="btn">View Rental Options</a>
+        <!-- PRACTICAL GUIDE GRID -->
+        <section class="why-us-section reveal">
+            <div class="container">
+                <div class="section-header" style="text-align: center; margin-bottom: 5rem;">
+                    <span class="badge" data-i18n="laos_guide_title">Essential Guide</span>
+                    <h2 class="section-title">Practical Travel Tips 2026</h2>
+                    <p data-i18n="laos_guide_subtitle">Everything you need to know for a seamless journey.</p>
+                </div>
+
+                <div class="boutique-grid">
+                    <!-- Fact 1 -->
+                    <div class="boutique-card reveal">
+                        <div class="card-content">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🚅</span>
+                            <h3 data-i18n="laos_transit_title">Modern Transit</h3>
+                            <p data-i18n="laos_transit_text">The Lao-China Railway has revolutionized travel. You can
+                                now reach heritage sites in hours rather than days.</p>
+                        </div>
+                    </div>
+                    <!-- Fact 2 -->
+                    <div class="boutique-card reveal reveal-delay-1">
+                        <div class="card-content">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">📱</span>
+                            <h3 data-i18n="laos_digital_title">Digital Entry</h3>
+                            <p data-i18n="laos_digital_text">The new Lao Digital Immigration Form (LDIF) has replaced
+                                paper cards. Complete it online for a swift entry.</p>
+                        </div>
+                    </div>
+                    <!-- Fact 3 -->
+                    <div class="boutique-card reveal reveal-delay-2">
+                        <div class="card-content">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">💵</span>
+                            <h3 data-i18n="laos_money_title">Money & Currency</h3>
+                            <p data-i18n="laos_money_text">The Lao Kip (LAK) is the official currency. While cards are
+                                accepted in cities, cash is king in the villages.</p>
+                        </div>
+                    </div>
+                    <!-- Fact 4 -->
+                    <div class="boutique-card reveal">
+                        <div class="card-content">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🌤️</span>
+                            <h3 data-i18n="laos_climate_title">Best Time to Visit</h3>
+                            <p data-i18n="laos_climate_text">November to February is the "Cool Dry" season. April is
+                                famous for the Pi Mai water festival.</p>
+                        </div>
+                    </div>
+                    <!-- Fact 5 -->
+                    <div class="boutique-card reveal reveal-delay-1">
+                        <div class="card-content">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🌿</span>
+                            <h3 data-i18n="laos_eco_title">Sustainability</h3>
+                            <p data-i18n="laos_eco_text">Laos is a leader in community-based tourism. Choosing local
+                                guides helps preserve our unique culture.</p>
+                        </div>
+                    </div>
+                    <!-- Fact 6 -->
+                    <div class="boutique-card reveal reveal-delay-2">
+                        <div class="card-content">
+                            <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">🍛</span>
+                            <h3 data-i18n="laos_food_title">Taste of Laos</h3>
+                            <p data-i18n="laos_food_text">Discover Larb, Sticky Rice, and world-famous Beer Lao. A
+                                fusion of French and Lao culinary traditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-banner reveal">
+            <div class="container cta-flex">
+                <div class="cta-content">
+                    <h2 data-i18n="laos_cta_title">Ready to Experience Laos?</h2>
+                    <p data-i18n="laos_cta_text">Let us guide you through the heart of Asia. Connect with our local
+                        experts today.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="tours.html" class="btn" data-i18n="nav_tours">Our Tours</a>
+                    <a href="https://wa.me/8562098457614" class="btn btn-outline-white">Chat with Us</a>
+                </div>
+            </div>
         </section>
     </main>
-    <!-- Deep Dive National Facts (Previous Content Integrated) -->
-    <section class="national-data reveal">
-        <div class="container">
-            <div class="section-header readable-content">
-                <h2 style="color: white; border-color: var(--secondary);">National Overview</h2>
-                <p style="color: rgba(255,255,255,0.7);">Key statistics and facts about the Lao People's
-                    Democratic Republic</p>
-            </div>
-            <div class="national-data-grid">
-                <div class="data-item">
-                    <span class="val">7.9M</span>
-                    <span class="label">Population</span>
-                </div>
-                <div class="data-item">
-                    <span class="val">4.5%</span>
-                    <span class="label">GDP Growth</span>
-                </div>
-                <div class="data-item">
-                    <span class="val">70%</span>
-                    <span class="label">Forest Cover</span>
-                </div>
-                <div class="data-item">
-                    <span class="val">26k MW</span>
-                    <span class="label">Hydro Potential</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Detailed History Summarized -->
-    <div class="etiquette-box reveal">
-        <h3>📜 Rich Civilizational History</h3>
-        <p>Rooted in the ancient <strong>Kingdom of Lan Xang</strong> (established 14th century), Laos has a
-            heritage that predates Angkor Wat. The spiritual connection with India brought Buddhism to the
-            region in the 2nd Century B.C., leading to the creation of the sacred That Luang Stupa and the Shiva
-            temple at Wat Phou. After a period of French Indochina rule, Laos gained independence in 1949 and
-            has evolved into a key member of ASEAN and the WTO.</p>
-    </div>
-    <div style="text-align: center; margin-top: 3rem;">
-        <a href="rentals.html" class="btn">View Rental Options</a>
-    </div>
-    </section>
-
-    <footer>
+    <footer id="footer">
         <div class="container footer-grid">
-            <div class="footer-col">
-                <img src="images/logo93.png" alt="Laos Smile Trip" class="footer-logo">
-                <p>Your local experts for an unforgettable journey through the heart of Laos.</p>
+            <div class="footer-brand">
+                <img src="images/logo93.png" alt="Logo" class="footer-logo">
+                <p data-i18n="footer_about">Your trusted local partner for unforgettable Asian adventures.</p>
             </div>
-            <div class="footer-col">
-                <h3>Quick Links</h3>
-                <p><a href="index.html">Home</a></p>
-                <p><a href="tours.html">Our Tours</a></p>
-                <p><a href="rentals.html">Rentals</a></p>
-                <p><a href="laos.html">Essential Guide</a></p>
+            <div class="footer-links" style="display: flex; flex-direction: column; gap: 1rem;">
+                <h4 data-i18n="quick_links">Quick Links</h4>
+                <ul
+                    style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="car-rentals.html">Rentals</a></li>
+                </ul>
             </div>
-            <div class="footer-col">
-                <h3>Contact Us</h3>
-                <p>Phone: +856 20 9845 7614</p>
-                <p>Email: LaosSmileTrip@gmail.com</p>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>📍 Luang Prabang, Laos</p>
+                <p>📞 +856 20 9845 7614</p>
+                <p>📧 LaosSmileTrip@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom"
-            style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 2rem;">
+            style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
             <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
         </div>
     </footer>
-
-    <a class="whatsapp-float" href="https://wa.me/8562098457614" target="_blank" rel="noopener">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
-            <path
-                d="M16.003 2.667c-7.363 0-13.333 5.97-13.333 13.333 0 2.35.613 4.646 1.781 6.674L2.667 29.333l6.84-1.76c1.96 1.07 4.17 1.63 6.493 1.63 7.364 0 13.333-5.97 13.333-13.333s-5.969-13.333-13.333-13.333zm0 24c-2.073 0-4.1-.523-5.897-1.514l-.423-.239-4.06 1.046 1.083-3.951-.275-.406c-1.112-1.646-1.699-3.563-1.699-5.478 0-5.546 4.514-10.06 10.06-10.06s10.06 4.514 10.06 10.06-4.514 10.06-10.06 10.06zm5.523-7.526c-.302-.151-1.79-.883-2.068-.984-.278-.101-.48-.151-.681.151-.201.302-.782.984-.959 1.186-.177.201-.353.227-.655.076-.302-.151-1.275-.471-2.429-1.503-.898-.8-1.503-1.789-1.68-2.091-.177-.302-.019-.466.133-.617.137-.136.302-.353.453-.53.151-.177.201-.302.302-.504.101-.201.051-.378-.025-.529-.076-.151-.681-1.64-.933-2.247-.245-.587-.494-.508-.681-.517-.176-.008-.378-.01-.58-.01-.201 0-.53.076-.806.378-.277.302-1.057 1.032-1.057 2.515 0 1.483 1.081 2.914 1.232 3.117.151.201 2.129 3.252 5.164 4.558.722.312 1.284.498 1.722.639.723.23 1.38.197 1.9.119.579-.086 1.79-.731 2.043-1.437.252-.706.252-1.31.176-1.437-.076-.126-.277-.201-.58-.353z" />
-        </svg>
-    </a>
 
     <script src="js/main.js"></script>
 </body>
