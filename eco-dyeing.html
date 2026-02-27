@@ -4,207 +4,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-Printing & Natural Dyeing Workshop | Laos Smile Trip</title>
+    <title>Eco-Printing & Natural Dyeing | Laos Smile Trip</title>
     <meta name="description"
-        content="Discover the magic of nature with our Eco-Printing and Natural Dyeing workshops in Ban Pongvan Village, Luang Prabang. Authentic Lao cultural experience.">
+        content="Discover the magic of nature with our Eco-Printing and Natural Dyeing workshops in Luang Prabang. Authentic Lao cultural experience.">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js" defer></script>
 </head>
 
-<body>
-    <header class="site-header">
+<body class="premium-theme">
+
+    <!-- ========== ✨ PREMIUM GLASS HEADER ========== -->
+    <header class="site-header site-header--glass">
         <div class="container nav-bar">
             <div class="logo-block">
                 <a href="index.html" class="logo">
                     <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
                 </a>
             </div>
-            <a href="#main-nav" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li class="has-dropdown">
-                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
-                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
-                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
-                            <li><a href="tours.html">All Tours</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="car-rentals.html">Car Rental</a></li>
-                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
-                            <li><a href="destinations.html">Luang Prabang</a></li>
-                            <li><a href="destinations.html">Vientiane Capital</a></li>
-                            <li><a href="destinations.html">Vang Vieng</a></li>
-                            <li><a href="destinations.html">Pakse (Champasak)</a></li>
-                            <li><a href="destinations.html">Xieng Khouang</a></li>
-                            <li><a href="destinations.html">Savannakhet</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="laos.html" data-i18n="nav_laos">Laos</a></li>
-                    <li><a href="eco-dyeing.html" class="active" data-i18n="nav_eco_dyeing">Eco-Dyeing</a></li>
-                    <li><a href="#footer" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+                    <li><a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a></li>
+                    <li><a href="destinations.html" data-i18n="nav_destinations">Destinations</a></li>
                     <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                    <li><a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a></li>
                 </ul>
             </nav>
+
             <div class="lang-switcher">
                 <div class="lang-dropdown">
                     <div class="lang-current">
                         <span id="current-lang-flag">🇺🇸</span>
                         <span id="current-lang-text">EN</span>
-                        <span class="chevron">▼</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="lang-list">
-                        <button class="lang-btn active" data-lang="en">🇺🇸 English (EN)</button>
-                        <button class="lang-btn" data-lang="fr">🇫🇷 Français (FR)</button>
-                        <button class="lang-btn" data-lang="lo">🇱🇦 ລາວ (LO)</button>
-                        <button class="lang-btn" data-lang="ja">🇯🇵 日本語 (JA)</button>
-                        <button class="lang-btn" data-lang="th">🇹🇭 ไทย (TH)</button>
+                        <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+                        <button class="lang-btn" data-lang="lo">🇱🇦 LO</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+                        <button class="lang-btn" data-lang="ja">🇯🇵 JA</button>
+                        <button class="lang-btn" data-lang="th">🇹🇭 TH</button>
                     </div>
                 </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
-    <div class="nav-overlay"></div>
 
     <main>
-        <!-- ECO-DYEING HERO -->
-        <section class="hero guide-hero-new">
-            <div class="hero-slide">
-                <img src="images/tours/Eco-Dyeing/s.jpeg" class="hero-bg-img active" alt="Eco Dyeing Workshop">
+        <!-- ========== ✨ CINEMATIC HERO (Subpage) ========== -->
+        <section class="hero--cinema" style="height: 60vh; min-height: 450px;">
+            <div class="hero-video-container">
+                <img src="images/tours/Eco-Dyeing/s.jpeg" alt="Eco Dyeing" class="hero-video">
+                <div class="hero-overlay"></div>
             </div>
-            <div class="container hero-content">
-                <div class="hero-glass-box reveal">
-                    <span class="hero-label">🌿 Nature's Magic</span>
-                    <h1 data-i18n="nav_eco_dyeing">Eco-Dyeing</h1>
-                    <p>Discover the art of forest colors at Ban Pongvan Village. Create unique textiles with the
-                        pigments of Laos.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- WORKSHOP INTRO -->
-        <section class="modern-welcome reveal" style="padding: 8rem 0;">
-            <div class="container welcome-grid">
-                <div class="welcome-image">
-                    <img src="images/tours/Eco-Dyeing/1.jpeg" alt="Eco Printing" class="img-floating">
-                </div>
-                <div class="welcome-text-content">
-                    <h2 style="color: var(--primary);">Discover the Magic: Eco-Printing</h2>
-                    <p class="lead-text">Nestled in the peaceful Ban Pongvan Village, just a short ride from the center
-                        of Luang Prabang, a unique creative experience awaits you.</p>
-                    <p>Eco-printing is a sustainable, chemical-free craft that uses the natural tannins and pigments
-                        found in leaves, barks, and flowers to create permanent prints on fabric. Every piece is a 100%
-                        unique reflection of the Luang Prabang landscape.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- METHODS GRID -->
-        <section class="why-us-section reveal">
             <div class="container">
-                <div class="section-header" style="text-align: center; margin-bottom: 5rem;">
-                    <h2 class="section-title">Learn the Art of "Nature on Fabric"</h2>
-                    <p>Hands-on classes designed for meaningful cultural connection.</p>
+                <div class="hero-text-wrap reveal">
+                    <span class="hero-tagline">🌿 Nature's Magic</span>
+                    <h1 class="hero-title" data-i18n="nav_eco_dyeing">Eco-Dyeing</h1>
+                    <p class="hero-desc">Discover the art of forest colors at Ban Pongvan Village. Create unique
+                        textiles with the living pigments of Laos.</p>
                 </div>
+            </div>
+        </section>
 
-                <div class="boutique-grid">
-                    <article class="boutique-card reveal">
-                        <div class="card-media">
-                            <img src="images/tours/Eco-Dyeing/WhatsApp Image 2026-02-24 at 13.33.06.jpeg"
-                                alt="Hammering">
-                        </div>
-                        <div class="card-content">
-                            <h3>Hammering (Hapazome)</h3>
-                            <p>Learn how to carefully hammer fresh plants into fabric to release their vibrant colors
-                                instantly.</p>
-                        </div>
-                    </article>
+        <!-- ========== 📖 WORKSHOP INTRO ========== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid--2-col flex-between">
+                    <div class="reveal">
+                        <span class="section-tag">Sustainable Craft</span>
+                        <h2 class="section-title">Discover the Magic: Eco-Printing</h2>
+                        <p class="lead-text" style="color: var(--primary); font-weight: 600; margin-bottom: 20px;">
+                            Nestled in the peaceful Ban Pongvan Village, a unique creative experience awaits.</p>
+                        <p class="mb-40">Eco-printing is a sustainable, chemical-free craft that uses the natural
+                            tannins and pigments found in leaves, barks, and flowers to create permanent prints on
+                            fabric. Every piece is a 100% unique reflection of the Luang Prabang landscape.</p>
+                    </div>
 
-                    <article class="boutique-card reveal reveal-delay-1">
-                        <div class="card-media">
-                            <img src="images/tours/Eco-Dyeing/WhatsApp Image 2026-02-24 at 13.33.04.jpeg"
-                                alt="Steaming">
-                        </div>
-                        <div class="card-content">
-                            <h3>Steaming Method</h3>
-                            <p>Discover how to bundle and steam fabric to create detailed, ethereal leaf prints that
-                                last a lifetime.</p>
-                        </div>
-                    </article>
-
-                    <div class="boutique-card reveal reveal-delay-2" style="background: var(--primary-light);">
-                        <div class="card-content">
-                            <h3>Workshop Prices</h3>
-                            <ul style="list-style: none; padding: 0; margin-top: 1rem;">
-                                <li style="margin-bottom: 1rem;"><b>$25</b> - Eco-Hammering (2-3h)</li>
-                                <li style="margin-bottom: 1rem;"><b>$45</b> - Full Steaming Day</li>
-                                <li><b>$80</b> - Family Pack (4 pax)</li>
-                            </ul>
-                            <a href="https://wa.me/8562098457614" class="btn"
-                                style="margin-top: 2rem; width: 100%; text-align: center;">Book Workshop</a>
-                        </div>
+                    <div class="image-stack reveal" style="height: 450px;">
+                        <img src="images/tours/Eco-Dyeing/1.jpeg" alt="Eco Printing" class="img-main">
+                        <img src="images/tours/Eco-Dyeing/WhatsApp Image 2026-02-24 at 13.33.06.jpeg"
+                            alt="Artisan Process" class="img-sub">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <section class="cta-banner reveal">
-            <div class="container cta-flex">
-                <div class="cta-content">
-                    <h2>Ready to create your own textile?</h2>
-                    <p>Our workshop is a perfect "off-the-beaten-path" experience for travelers and families alike.</p>
+        <!-- ========== 🎨 METHODS ========== -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <span class="section-tag">Traditional Techniques</span>
+                    <h2 class="section-title">Learn the Art of "Nature on Fabric"</h2>
                 </div>
-                <div class="cta-actions">
-                    <a href="https://wa.me/8562098457614" class="btn">Message for Availability</a>
+
+                <div class="grid grid--3-col">
+                    <!-- Method 1 -->
+                    <div class="tour-card-premium reveal">
+                        <div class="tour-image" style="height: 250px;">
+                            <img src="images/tours/Eco-Dyeing/WhatsApp Image 2026-02-24 at 13.33.06.jpeg"
+                                alt="Hammering">
+                        </div>
+                        <div class="tour-body">
+                            <h3>Hammering (Hapazome)</h3>
+                            <p>An ancient technique to release vibrant plant pigments directly into natural fibers.
+                                Instant magic.</p>
+                        </div>
+                    </div>
+                    <!-- Method 2 -->
+                    <div class="tour-card-premium reveal" style="transition-delay: 0.1s;">
+                        <div class="tour-image" style="height: 250px;">
+                            <img src="images/tours/Eco-Dyeing/WhatsApp Image 2026-02-24 at 13.33.04.jpeg"
+                                alt="Steaming">
+                        </div>
+                        <div class="tour-body">
+                            <h3>Steaming Method</h3>
+                            <p>Bundling botanical elements and steaming them to reveal ethereal, detailed silhouettes of
+                                the forest.</p>
+                        </div>
+                    </div>
+                    <!-- Pricing card -->
+                    <div class="tour-card-premium reveal"
+                        style="padding: 40px; background: var(--bg-alt); transition-delay: 0.2s;">
+                        <h3>Workshop Packs</h3>
+                        <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                            <li
+                                style="margin-bottom: 15px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px;">
+                                <span style="font-weight: 700; color: var(--primary);">$25</span> — Eco-Hammering (2h)
+                            </li>
+                            <li
+                                style="margin-bottom: 15px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 15px;">
+                                <span style="font-weight: 700; color: var(--primary);">$45</span> — Full Steaming Day
+                            </li>
+                            <li>
+                                <span style="font-weight: 700; color: var(--primary);">$80</span> — Family Group (4 Pax)
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/8562098457614" class="btn btn-primary btn-sm"
+                            style="width: 100%; margin-top: 30px;">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 🌋 CTA PREMIUM ========== -->
+        <section id="contact" class="cta-premium">
+            <div class="container">
+                <div class="cta-inner reveal">
+                    <div class="cta-text">
+                        <h2 data-i18n="cta_title">Ready to create?</h2>
+                        <p data-i18n="cta_text">Join us in the village for a day of colors and creativity.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/8562098457614" class="btn btn-primary btn-xl"
+                            data-i18n="whatsapp_btn">Check Availability</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="images/logo93.png" alt="Logo" class="footer-logo">
-                <p data-i18n="footer_about">Your trusted local partner for unforgettable Asian adventures.</p>
+    <!-- ========== 🦶 FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo93.png" alt="Logo" class="footer-logo">
+                    <p data-i18n="footer_about">Premier local tour operator and DMC, dedicated to authentic slow travel
+                        and sustainable heritage tourism in the heart of Laos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="quick_links">Explore</h4>
+                    <ul>
+                        <li><a href="tours.html">All Tours</a></li>
+                        <li><a href="car-rentals.html">Car Rentals</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="nav_laos">Travel Info</h4>
+                    <ul>
+                        <li><a href="laos.html">About Laos</a></li>
+                        <li><a href="eco-dyeing.html">Eco-Dyeing</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Luang Prabang, Laos</li>
+                        <li><i class="fas fa-phone"></i> +856 20 9845 7614</li>
+                        <li><i class="fas fa-envelope"></i> LaosSmileTrip@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links" style="display: flex; flex-direction: column; gap: 1rem;">
-                <h4 data-i18n="quick_links">Quick Links</h4>
-                <ul
-                    style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="car-rentals.html">Rentals</a></li>
-                </ul>
+
+            <div class="footer-bottom flex-between">
+                <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
             </div>
-            <div class="footer-contact">
-                <h4>Contact Info</h4>
-                <p>📍 Luang Prabang, Laos</p>
-                <p>📞 +856 20 9845 7614</p>
-                <p>📧 LaosSmileTrip@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom"
-            style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
-            <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 

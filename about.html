@@ -4,211 +4,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Laos Smile Trip - Local Experts in Luang Prabang</title>
+    <title>About Us | Laos Smile Trip - Authentic Local Partners</title>
     <meta name="description"
-        content="Learn more about Laos Smile Trip, your trusted local tour operator and accommodation specialist in Luang Prabang, Laos.">
+        content="Discover the story of Laos Smile Trip. We are local experts dedicated to sharing the true heart of Laos through boutique tours and ethical travel.">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Style -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js" defer></script>
 </head>
 
-<body>
-    <header class="site-header">
+<body class="premium-theme">
+
+    <!-- ========== ✨ PREMIUM GLASS HEADER ========== -->
+    <header class="site-header site-header--glass">
         <div class="container nav-bar">
             <div class="logo-block">
                 <a href="index.html" class="logo">
                     <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
                 </a>
             </div>
-            <a href="#main-nav" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li class="has-dropdown">
-                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
-                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
-                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
-                            <li><a href="tours.html">All Tours</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="car-rentals.html">Car Rental</a></li>
-                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
-                            <li><a href="destinations.html">Luang Prabang</a></li>
-                            <li><a href="destinations.html">Vientiane Capital</a></li>
-                            <li><a href="destinations.html">Vang Vieng</a></li>
-                            <li><a href="destinations.html">Pakse (Champasak)</a></li>
-                            <li><a href="destinations.html">Xieng Khouang</a></li>
-                            <li><a href="destinations.html">Savannakhet</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="laos.html" data-i18n="nav_laos">Laos</a></li>
-                    <li><a href="eco-dyeing.html" data-i18n="nav_eco_dyeing">Eco-Dyeing</a></li>
-                    <li><a href="#footer" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
+                    <li><a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a></li>
+                    <li><a href="destinations.html" data-i18n="nav_destinations">Destinations</a></li>
                     <li><a href="about.html" class="active" data-i18n="nav_about">About</a></li>
+                    <li><a href="#contact" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a></li>
                 </ul>
             </nav>
+
             <div class="lang-switcher">
                 <div class="lang-dropdown">
                     <div class="lang-current">
                         <span id="current-lang-flag">🇺🇸</span>
                         <span id="current-lang-text">EN</span>
-                        <span class="chevron">▼</span>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="lang-list">
-                        <button class="lang-btn active" data-lang="en">🇺🇸 English (EN)</button>
-                        <button class="lang-btn" data-lang="fr">🇫🇷 Français (FR)</button>
-                        <button class="lang-btn" data-lang="lo">🇱🇦 ລາວ (LO)</button>
-                        <button class="lang-btn" data-lang="ja">🇯🇵 日本語 (JA)</button>
-                        <button class="lang-btn" data-lang="th">🇹🇭 ไทย (TH)</button>
+                        <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+                        <button class="lang-btn" data-lang="lo">🇱🇦 LO</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+                        <button class="lang-btn" data-lang="ja">🇯🇵 JA</button>
+                        <button class="lang-btn" data-lang="th">🇹🇭 TH</button>
                     </div>
                 </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
-    <div class="nav-overlay"></div>
 
     <main>
-        <!-- MODERN ABOUT HERO -->
-        <section class="hero about-hero-new">
-            <div class="hero-slide">
-                <img src="images/about laos/luang-prabang-form-air.jpg" class="hero-bg-img active"
-                    alt="Luang Prabang Aerial View">
+        <!-- ========== ✨ CINEMATIC HERO (Subpage) ========== -->
+        <section class="hero--cinema" style="height: 60vh; min-height: 450px;">
+            <div class="hero-video-container">
+                <img src="images/about laos/luang-prabang-form-air.jpg" alt="About Laos Smile Trip" class="hero-video">
+                <div class="hero-overlay"></div>
             </div>
-            <div class="container hero-content">
-                <div class="hero-glass-box reveal">
-                    <span class="hero-label" data-i18n="about_badge">🌿 Our Story</span>
-                    <h1 data-i18n="nav_about">About Us</h1>
-                    <p data-i18n="about_intro_title">Experience Authentic Laos with Local Experts</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- STORY SECTION -->
-        <section class="modern-welcome reveal">
-            <div class="container welcome-grid">
-                <div class="welcome-image">
-                    <img src="images/tours/heritage/1.jpg" alt="Heritage Site" class="img-floating">
-                    <div class="welcome-offset-card" style="background: var(--primary);">
-                        <h3 style="font-size: 2rem;">10+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                </div>
-                <div class="welcome-text-content">
-                    <h2 data-i18n="workshop_story">Born from the Warmth of a Lao Smile</h2>
-                    <p class="lead-text" data-i18n="about_intro_para">Based in the beautiful UNESCO town of Luang
-                        Prabang, we are a team of local experts dedicated to showing you the true heart of our homeland.
-                    </p>
-                    <p data-i18n="about_team_para">From our family roots to our expert-led journeys, we provide a
-                        personal touch that only true locals can offer. We transform simple sightseeing into lifelong
-                        connections with our people and culture.</p>
-
-                    <div class="cta-actions" style="margin-top: 2rem;">
-                        <a href="tours.html" class="btn" data-i18n="nav_tours">Our Tours</a>
-                        <a href="eco-dyeing.html" class="btn btn-outline" data-i18n="nav_eco_dyeing">Eco-Dyeing</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MISSION & VALUES -->
-        <section class="why-us-section reveal">
             <div class="container">
-                <div class="section-header center" style="text-align: center; margin-bottom: 4rem;">
-                    <span class="badge" data-i18n="about_mission_title">💛 Our Mission</span>
-                    <h2 class="section-title">Values That Guide Us</h2>
-                    <p data-i18n="about_mission_para">We believe in sustainable, community-based tourism that respects
-                        local traditions while providing high-quality experiences.</p>
+                <div class="hero-text-wrap reveal">
+                    <span class="hero-tagline" data-i18n="about_badge">🌿 Our Story</span>
+                    <h1 class="hero-title" data-i18n="nav_about">About Us</h1>
+                    <p class="hero-desc">Experience the true rhythm of Laos through the eyes of those who call it home.
+                    </p>
                 </div>
+            </div>
+        </section>
 
-                <div class="boutique-grid">
-                    <div class="boutique-card reveal">
-                        <div class="card-content" style="text-align: center;">
-                            <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🤝</span>
-                            <h3 data-i18n="about_team_title">Local Hospitality</h3>
-                            <p>We treat every guest like family, sharing hidden spots and stories known only to locals.
-                            </p>
+        <!-- ========== 📖 OUR STORY ========== -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid--2-col flex-between">
+                    <div class="reveal">
+                        <span class="section-tag" data-i18n="about_badge">Local Passion</span>
+                        <h2 class="section-title" data-i18n="about_title">Born from the Warmth of a Lao Smile</h2>
+                        <p class="lead-text" style="color: var(--primary); font-weight: 600; margin-bottom: 20px;">Based
+                            in the spiritual capital of Luang Prabang, we are more than just a travel agency.</p>
+                        <p class="mb-40">Founded with a vision to connect travelers with the authentic soul of our
+                            country, Laos Smile Trip has grown from a small family initiative into a premier boutique
+                            operator. We believe in "Slow Travel"—the art of pausing, listening, and truly feeling the
+                            spirit of the Mekong.</p>
+
+                        <div class="grid grid--2-col" style="gap: 20px;">
+                            <div style="background: var(--bg-alt); padding: 25px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">Authenticity</h4>
+                                <p style="font-size: 0.85rem;">Every experience is vetted and designed by local experts.
+                                </p>
+                            </div>
+                            <div style="background: var(--bg-alt); padding: 25px; border-radius: var(--radius-md);">
+                                <h4 style="color: var(--primary); margin-bottom: 10px;">Integrity</h4>
+                                <p style="font-size: 0.85rem;">Honest pricing, ethical encounters, and zero hidden
+                                    costs.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="boutique-card reveal reveal-delay-1">
-                        <div class="card-content" style="text-align: center;">
-                            <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🌿</span>
-                            <h3 data-i18n="about_workshop_title">Artisan Commitment</h3>
-                            <p data-i18n="about_workshop_para">Our Eco-Printing workshop supports rural artisans and
-                                preserves our creative heritage.</p>
-                        </div>
-                    </div>
-                    <div class="boutique-card reveal reveal-delay-2">
-                        <div class="card-content" style="text-align: center;">
-                            <span style="font-size: 3rem; display: block; margin-bottom: 1.5rem;">🐘</span>
-                            <h3>Ethical Adventures</h3>
-                            <p>We ensure every trek, cruise, and encounter is respectful to nature, wildlife, and
-                                community.</p>
-                        </div>
+
+                    <div class="image-stack reveal" style="height: 500px;">
+                        <img src="images/tours/heritage/1.jpg" alt="Local Culture" class="img-main">
+                        <img src="images/tours/elephant/PXL_20220901_030520392-960x636.jpg" alt="Elephant Connection"
+                            class="img-sub">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TEAM/VILLA OFFSET SECTION -->
-        <section class="modern-welcome reveal">
-            <div class="container welcome-grid" style="direction: rtl;">
-                <div class="welcome-image" style="direction: ltr;">
-                    <img src="images/tours/Eco-Dyeing/s.jpeg" alt="Eco Dyeing" class="img-floating">
+        <!-- ========== 🌟 OUR VALUES ========== -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <span class="section-tag" data-i18n="about_mission_title">💛 Our Mission</span>
+                    <h2 class="section-title">The Values That Guide Us</h2>
                 </div>
-                <div class="welcome-text-content" style="direction: ltr;">
-                    <span class="badge">🏘️ Our Local Roots</span>
-                    <h2>A Family Legacy</h2>
-                    <p>Our journey began with a simple desire: to share the quiet beauty of Luang Prabang with the
-                        world. Today, that legacy continues through our tours and our family-run hospitality.</p>
-                    <p>Every guide on our team is a storyteller, a neighbour, and a friend. We don't just show you Laos;
-                        we welcome you home.</p>
+
+                <div class="grid grid--3-col">
+                    <div class="tour-card-premium reveal" style="padding: 40px; text-align: center;">
+                        <span style="font-size: 3rem; margin-bottom: 20px; display: block;">⛵</span>
+                        <h3>Community First</h3>
+                        <p>We work directly with local families, boatmen, and artisans, ensuring that your journey
+                            directly supports our home.</p>
+                    </div>
+                    <div class="tour-card-premium reveal"
+                        style="padding: 40px; text-align: center; transition-delay: 0.1s;">
+                        <span style="font-size: 3rem; margin-bottom: 20px; display: block;">🐘</span>
+                        <h3>Ethical Wildlife</h3>
+                        <p>No riding, no chains. We only partner with projects that prioritize animal welfare and
+                            natural forest living.</p>
+                    </div>
+                    <div class="tour-card-premium reveal"
+                        style="padding: 40px; text-align: center; transition-delay: 0.2s;">
+                        <span style="font-size: 3rem; margin-bottom: 20px; display: block;">🎨</span>
+                        <h3>Heritage Preservation</h3>
+                        <p>From Eco-Dyeing to temple history, we strive to keep our traditions alive for future
+                            generations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 🌋 CTA PREMIUM ========== -->
+        <section id="contact" class="cta-premium">
+            <div class="container">
+                <div class="cta-inner reveal">
+                    <div class="cta-text">
+                        <h2 data-i18n="cta_title">Join Our Story</h2>
+                        <p data-i18n="cta_text">Let us be your bridge to the authentic heart of Laos.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="https://wa.me/8562098457614" class="btn btn-primary btn-xl"
+                            data-i18n="whatsapp_btn">Start a Conversation</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="images/logo93.png" alt="Logo" class="footer-logo">
-                <p data-i18n="footer_about">Your trusted local partner for unforgettable Asian adventures.</p>
+    <!-- ========== 🦶 FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo93.png" alt="Logo" class="footer-logo">
+                    <p data-i18n="footer_about">Premier local tour operator and DMC, dedicated to authentic slow travel
+                        and sustainable heritage tourism in the heart of Laos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="quick_links">Explore</h4>
+                    <ul>
+                        <li><a href="tours.html">All Tours</a></li>
+                        <li><a href="car-rentals.html">Car Rentals</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="nav_laos">Travel Info</h4>
+                    <ul>
+                        <li><a href="laos.html">About Laos</a></li>
+                        <li><a href="eco-dyeing.html">Eco-Dyeing</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Luang Prabang, Laos</li>
+                        <li><i class="fas fa-phone"></i> +856 20 9845 7614</li>
+                        <li><i class="fas fa-envelope"></i> LaosSmileTrip@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links" style="display: flex; flex-direction: column; gap: 1rem;">
-                <h4 data-i18n="quick_links">Quick Links</h4>
-                <ul
-                    style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="car-rentals.html">Rentals</a></li>
-                </ul>
+
+            <div class="footer-bottom flex-between">
+                <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>Contact Info</h4>
-                <p>📍 Luang Prabang, Laos</p>
-                <p>📞 +856 20 9845 7614</p>
-                <p>📧 LaosSmileTrip@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom"
-            style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
-            <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 
