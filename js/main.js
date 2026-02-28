@@ -45,23 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     // ========== 🌍 LANGUAGE PICKER ==========
-    const langDropdown = document.querySelector('.lang-dropdown');
-    const langBtns = document.querySelectorAll('.lang-btn');
-
-    if (langDropdown) {
-        // Handled by CSS hover usually, but adding click for mobile if needed
-        langBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                if (typeof switchLanguage === 'function') {
-                    switchLanguage(lang);
-                }
-                // Update active state
-                langBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            });
-        });
-    }
+    // Logic moved to i18n.js for centralized management and to fix dropdown behavior
 
     // ========== ⚓ SMOOTH SCROLL ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
