@@ -938,14 +938,9 @@ function updateLanguage(lang) {
     // Update HTML lang attribute
     document.documentElement.lang = lang;
 
-    // Update current lang label in the dropdown
-    const currentLangText = document.getElementById('current-lang-text');
+    // Current lang label is now hidden (Flag only mode)
+
     const currentLangFlag = document.getElementById('current-lang-flag');
-
-    if (currentLangText) {
-        currentLangText.textContent = lang === 'la' ? 'La' : lang.toUpperCase();
-    }
-
     const flags = {
         'en': '🇺🇸',
         'fr': '🇫🇷',
