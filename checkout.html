@@ -668,6 +668,7 @@
 
             async function sendNotification() {
                 try {
+                    const id = localStorage.getItem('current_booking_id');
                     const prodName = localStorage.getItem('selected_product_name');
                     const guests = localStorage.getItem('selected_product_guests');
                     const date = document.getElementById('travel-date').value;
@@ -702,6 +703,7 @@
                         travel_date: date || 'Not selected',
                         customer_name: custName,
                         whatsapp: custWA,
+                        email: custEmail,
                         payment_mode: mode
                     }).toString();
 
