@@ -942,15 +942,16 @@ function updateLanguage(lang) {
 
     const currentLangFlag = document.getElementById('current-lang-flag');
     const flags = {
-        'en': '🇺🇸',
-        'fr': '🇫🇷',
-        'la': '🇱🇦',
-        'ja': '🇯🇵',
-        'th': '🇹🇭'
+        'en': 'fi-us',
+        'fr': 'fi-fr',
+        'la': 'fi-la',
+        'ja': 'fi-jp',
+        'th': 'fi-th'
     };
 
     if (currentLangFlag) {
-        currentLangFlag.textContent = flags[lang] || '';
+        // Remove existing fi-* classes and add the new one
+        currentLangFlag.className = 'fi ' + (flags[lang] || '');
     }
 
     // Save preference
