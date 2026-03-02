@@ -349,7 +349,11 @@ img {
     padding: 10px;
     z-index: 10;
     margin-top: 10px;
-    width: 140px;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
 @media (hover: hover) {
@@ -366,10 +370,12 @@ img {
     padding: 8px 12px;
     border: none;
     background: none;
-    text-align: left;
+    text-align: center;
     cursor: pointer;
-    border-radius: 6px;
-    font-weight: 600;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    padding: 10px;
+    line-height: 1;
 }
 
 .lang-btn:hover,
