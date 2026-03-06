@@ -1135,10 +1135,11 @@ img {
     justify-content: center;
     font-size: 32px;
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    z-index: 2000;
+    z-index: 9999;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
     text-decoration: none;
+    animation: wa-pulse 2s infinite;
 }
 
 .whatsapp-float:hover {
@@ -1166,9 +1167,10 @@ img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .whatsapp-float {
-        bottom: 20px;
+        bottom: 90px;
+        /* Above the bottom nav */
         right: 20px;
         width: 55px;
         height: 55px;
@@ -1465,31 +1467,6 @@ img {
     }
 }
 
-.whatsapp-float {
-    position: fixed !important;
-    bottom: 90px !important;
-    /* Above the bottom nav */
-    right: 20px !important;
-    width: 55px !important;
-    height: 55px !important;
-    background: #25D366 !important;
-    color: white !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 28px !important;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3) !important;
-    z-index: 9999 !important;
-    transition: 0.3s !important;
-    text-decoration: none !important;
-    animation: wa-pulse 2s infinite !important;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1) !important;
-    background: #128C7E !important;
-}
 
 /* 📱 Bottom Navigation Tab Bar (Mobile Only) */
 .mobile-bottom-nav {
@@ -1606,11 +1583,11 @@ img {
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        bottom: 85px !important;
-        right: 15px !important;
-        width: 50px !important;
-        height: 50px !important;
-        font-size: 24px !important;
+        bottom: 85px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 }
 
