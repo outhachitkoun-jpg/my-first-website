@@ -474,7 +474,7 @@ img {
 }
 
 @media (hover: hover) {
-    .has-dropdown:hover > .dropdown-menu {
+    .has-dropdown:hover>.dropdown-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -521,7 +521,7 @@ img {
         transform: rotate(180deg);
     }
 
-    .has-dropdown > .dropdown-menu {
+    .has-dropdown>.dropdown-menu {
         position: static;
         opacity: 1;
         visibility: visible;
@@ -534,7 +534,7 @@ img {
         background: transparent;
     }
 
-    .has-dropdown.active > .dropdown-menu {
+    .has-dropdown.active>.dropdown-menu {
         max-height: 800px;
     }
 
@@ -557,6 +557,7 @@ img {
     position: relative;
     border-radius: 50%;
     transition: var(--transition-base);
+    z-index: 10002;
 }
 
 .site-header.scrolled .menu-toggle {
@@ -587,9 +588,15 @@ img {
 }
 
 @media (max-width: 991px) {
+    .lang-switcher {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
     .menu-toggle {
         display: flex;
         color: var(--text-main);
+        z-index: 10002;
     }
 
     .site-header--glass:not(.scrolled) .menu-toggle {
@@ -1611,24 +1618,28 @@ img {
         transform: none;
     }
 }
+
 /* ========== Sub-Dropdown Logic ========== */
 .has-subdropdown {
     position: relative;
 }
+
 .sub-dropdown-menu {
     top: -10px !important;
     left: 100% !important;
     margin-left: 2px;
 }
+
 @media (hover: hover) {
-    .has-subdropdown:hover > .sub-dropdown-menu {
+    .has-subdropdown:hover>.sub-dropdown-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
     }
 }
+
 @media (max-width: 991px) {
-    .has-subdropdown > a::after {
+    .has-subdropdown>a::after {
         content: '\f107';
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
@@ -1636,9 +1647,11 @@ img {
         font-size: 0.8rem;
         transition: transform 0.3s ease;
     }
-    .has-subdropdown.active > a::after {
+
+    .has-subdropdown.active>a::after {
         transform: rotate(180deg);
     }
+
     .has-subdropdown .sub-dropdown-menu {
         position: static !important;
         opacity: 1;
@@ -1651,6 +1664,7 @@ img {
         border: none;
         background: transparent;
     }
+
     .has-subdropdown.active .sub-dropdown-menu {
         max-height: 500px;
     }
