@@ -1,5 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ========== 📱 WHATSAPP CLICK TRACKING NOTIFIER ==========
+    const notifyWhatsAppClick = (url) => {
+        if (!url || typeof url !== 'string' || (!url.includes('wa.me') && !url.includes('whatsapp.com'))) return;
+
+        try {
+            const pageName = document.title || window.location.pathname;
+            const message = `A guest clicked to initiate a WhatsApp inquiry!\n\nPage: ${pageName}\nWebsite URL: ${window.location.href}\nTarget Link: ${url}`;
+
+            const formData = new FormData();
+            formData.append('_subject', `New WhatsApp Inquiry Alert! -> ${pageName}`);
+            formData.append('email', 'noreply@laossmiletrip.com');
+            formData.append('message', message);
+
+            // Append some extra details
+            formData.append('Source Page', pageName);
+            formData.append('Page URL', window.location.href);
+            formData.append('WhatsApp Destination', url);
+
+            fetch('https://formsubmit.co/ajax/luangprabangsmiletrip@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).catch(e => console.log('Silently ignored Notification', e));
+        } catch (e) { }
+    };
+
+    // Track standard link clicks anywhere on the document
+    document.body.addEventListener('click', (e) => {
+        const target = e.target.closest('a');
+        if (target && target.href) {
+            notifyWhatsAppClick(target.href);
+        }
+    });
+
+    // Track programmatic window.open calls (like those from forms)
+    const originalWindowOpen = window.open;
+    window.open = function (url, target, features) {
+        notifyWhatsAppClick(url);
+        return originalWindowOpen.call(window, url, target, features);
+    };
+
     // ========== 🕵️ HEADER SCROLL LOGIC ==========
     const header = document.querySelector('.site-header');
     const handleScroll = () => {
