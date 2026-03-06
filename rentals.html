@@ -22,6 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css'>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -43,13 +44,37 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
-                    <li><a href="rentals.html" class="active" data-i18n="nav_rentals">Rentals</a></li>
-                    <li><a href="laos.html" data-i18n="nav_laos">Laos</a></li>
-                    <li><a href="eco-dyeing.html" data-i18n="nav_eco_dyeing">Eco-Dyeing</a></li>
-                    <li><a href="index.html#contact" data-i18n="nav_contact">Contact</a></li>
+                    <li class="has-dropdown">
+                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
+                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
+                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
+                            <li><a href="tours.html">All Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="car-rentals.html">Car Rental</a></li>
+                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
+                            <li><a href="destinations.html" data-i18n="dest_lp">Luang Prabang</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vt">Vientiane</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vv">Vang Vieng</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_ps">Pakse</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_tk">Thakhek</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_nk">Nong Khiaw</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_sv">Luang Namtha</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_cp">Champasak</a></li>
+                        </ul>
+                    </li>
                     <li><a href="about.html" data-i18n="nav_about">About</a></li>
-
                 </ul>
             </nav>
         </div>

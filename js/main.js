@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ========== 🕵️ HEADER SCROLL LOGIC ==========
     const header = document.querySelector('.site-header');
     const handleScroll = () => {
+        if (!header) return;
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
             header.classList.remove('site-header--glass');
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const toggleMenu = () => {
+        if (!nav || !menuToggle) return;
         nav.classList.toggle('active');
         menuToggle.classList.toggle('active');
         overlay.classList.toggle('active');
@@ -38,18 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.addEventListener('click', toggleMenu);
     }
 
+    // ========== 📱 MOBILE DROPDOWNS ==========
+    const dropdowns = document.querySelectorAll('.has-dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        link.addEventListener('click', (e) => {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            }
+        });
+    });
+
     // ========== 🌍 LANGUAGE PICKER ==========
     const langDropdown = document.querySelector('.lang-dropdown');
     if (langDropdown) {
         langDropdown.addEventListener('click', (e) => {
-            // Only toggle if we're not clicking a specific language button
             if (!e.target.closest('.lang-btn')) {
                 langDropdown.classList.toggle('active');
             }
         });
     }
 
-    // Close dropdowns when clicking outside
     document.addEventListener('click', (e) => {
         if (langDropdown && !langDropdown.contains(e.target)) {
             langDropdown.classList.remove('active');
@@ -74,9 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // ========== 🌍 LANGUAGE PICKER ==========
-    // Logic moved to i18n.js for centralized management and to fix dropdown behavior
-
     // ========== ⚓ SMOOTH SCROLL ==========
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -92,16 +101,109 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-
     });
 
-    // ========== 💬 INJECT FLOATING WHATSAPP ==========
-    const waButton = document.createElement('a');
-    waButton.href = 'https://wa.me/8562098457614';
-    waButton.className = 'whatsapp-float';
-    waButton.target = '_blank';
-    waButton.innerHTML = '<i class="fab fa-whatsapp"></i>';
-    document.body.appendChild(waButton);
+    // ========== 📱 DYNAMIC MOBILE COMPONENTS ==========
+    const injectMobileExtras = () => {
+        // 1. Bottom Nav Tab Bar
+        const bottomNav = document.createElement('nav');
+        bottomNav.className = 'mobile-bottom-nav';
+
+        // Determine active state
+        const path = window.location.pathname;
+        const isHome = path.includes('index.html') || path.endsWith('/');
+        const isTours = path.includes('tour') || path.includes('tours.html');
+        const isRentals = path.includes('rental');
+
+        bottomNav.innerHTML = `
+            <a href="index.html" class="mobile-nav-item ${isHome ? 'active' : ''}">
+                <i class="fas fa-home"></i>
+                <span data-i18n="nav_home">Home</span>
+            </a>
+            <a href="tours.html" class="mobile-nav-item ${isTours ? 'active' : ''}">
+                <i class="fas fa-map-marked-alt"></i>
+                <span data-i18n="nav_tours">Tours</span>
+            </a>
+            <a href="car-rentals.html" class="mobile-nav-item ${isRentals ? 'active' : ''}">
+                <i class="fas fa-car"></i>
+                <span data-i18n="nav_rentals">Rentals</span>
+            </a>
+            <a href="https://wa.me/8562098457614" class="mobile-nav-item">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        `;
+        document.body.appendChild(bottomNav);
+
+        // 2. WhatsApp Pulsed Floating Button
+        const waButton = document.createElement('a');
+        waButton.href = 'https://wa.me/8562098457614';
+        waButton.className = 'whatsapp-float';
+        waButton.target = '_blank';
+        waButton.innerHTML = '<i class="fab fa-whatsapp"></i>';
+        document.body.appendChild(waButton);
+
+        // 3. Sticky Bottom CTA (Only on Tour/Rental sub-pages)
+        const isSubPage = (path.includes('tour-') || path.includes('eco-dyeing') || path.includes('rentals.html') || path.includes('motorbike'));
+        if (isSubPage) {
+            const h1 = document.querySelector('h1')?.textContent || 'This Tour';
+            let priceText = 'Best Price';
+            const priceTags = Array.from(document.querySelectorAll('span, li, p')).filter(el => el.textContent.includes('$') || el.textContent.includes('KIP'));
+            if (priceTags.length > 0) {
+                priceTags.sort((a, b) => a.textContent.length - b.textContent.length);
+                priceText = priceTags[0].textContent.trim();
+            }
+
+            const stickyCta = document.createElement('div');
+            stickyCta.className = 'sticky-mobile-cta';
+            stickyCta.innerHTML = `
+                <div class="sticky-cta-info">
+                    <span class="label">Now Booking</span>
+                    <span class="price">${priceText}</span>
+                </div>
+                <button class="btn btn-primary btn-sm" onclick="window.bookFromSticky('${h1}', '${priceText}')">Book Now</button>
+            `;
+            document.body.appendChild(stickyCta);
+        }
+    };
+
+    window.bookFromSticky = (name, price) => {
+        bookProduct(name, price);
+    };
+
+    // ========== ⚡ SMART IMAGE OPTIMIZER (Lazy Loading) ==========
+    const optimizeImages = () => {
+        const allImages = document.querySelectorAll('img');
+
+        allImages.forEach(img => {
+            if (!img.hasAttribute('loading')) {
+                img.setAttribute('loading', 'lazy');
+            }
+            img.classList.add('img-lazy');
+
+            if (img.complete) {
+                img.classList.add('loaded');
+            } else {
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                });
+            }
+        });
+
+        const imgObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    imgObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        allImages.forEach(img => imgObserver.observe(img));
+    };
+
+    optimizeImages();
+    injectMobileExtras();
 
     // ========== ❓ FAQ ACCORDION ==========
     const faqItems = document.querySelectorAll('.faq-item');
@@ -111,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (question) {
                 question.addEventListener('click', () => {
                     item.classList.toggle('active');
-                    // Optional: Close others
                     faqItems.forEach(other => {
                         if (other !== item) other.classList.remove('active');
                     });
@@ -127,9 +228,9 @@ function bookProduct(name, price, date = '', guests = 1) {
     localStorage.setItem('selected_product_price', price);
     localStorage.setItem('selected_product_date', date);
     localStorage.setItem('selected_product_guests', guests);
-    
+
     showToast('Ready to book!', `Added ${name} to your inquiry.`, 'success');
-    
+
     setTimeout(() => {
         window.location.href = 'checkout.html';
     }, 1500);
@@ -146,14 +247,14 @@ function showToast(title, message, type = 'info', duration = 4000) {
 
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
-    
+
     const icons = {
         success: 'fa-check-circle',
         error: 'fa-exclamation-circle',
         warning: 'fa-exclamation-triangle',
         info: 'fa-info-circle'
     };
-    
+
     const icon = icons[type] || icons.info;
 
     toast.innerHTML = `
@@ -174,8 +275,6 @@ function showToast(title, message, type = 'info', duration = 4000) {
         setTimeout(() => toast.remove(), 500);
     };
 
-    closeBtn.onclick = dismissToast;
-
+    if (closeBtn) closeBtn.onclick = dismissToast;
     setTimeout(dismissToast, duration);
 }
-

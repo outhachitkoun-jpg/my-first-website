@@ -32,9 +32,36 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
-                    <li><a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a></li>
-                    <li><a href="destinations.html" class="active" data-i18n="nav_destinations">Destinations</a></li>
+                    <li class="has-dropdown">
+                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
+                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
+                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
+                            <li><a href="tours.html">All Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="car-rentals.html">Car Rental</a></li>
+                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="destinations.html" class="active" data-i18n="nav_destinations">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
+                            <li><a href="destinations.html" data-i18n="dest_lp">Luang Prabang</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vt">Vientiane</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vv">Vang Vieng</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_ps">Pakse</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_tk">Thakhek</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_nk">Nong Khiaw</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_sv">Luang Namtha</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_cp">Champasak</a></li>
+                        </ul>
+                    </li>
                     <li><a href="about.html" data-i18n="nav_about">About</a></li>
                     <li><a href="checkout.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a></li>
                 </ul>
@@ -45,7 +72,7 @@
                     <div class="lang-current">
                         <span id="current-lang-flag" class="fi fi-us"></span>
                         <span id="current-lang-text" style="display:none"></span>
-                        
+
                     </div>
                     <div class="lang-list">
                         <button class="lang-btn active" data-lang="en"><span class="fi fi-us"></span></button>
@@ -127,7 +154,7 @@
                     <div class="tour-card-premium reveal"
                         style="display: flex; flex-direction: row; height: 320px; transition-delay: 0.2s;">
                         <div style="flex: 1; overflow: hidden;">
-                            <img src="images/tours/heritage/4.jpg" alt="Vientiane"
+                            <img src="images/Vientian/20250513000435_Pha_That_Luang_Vientiane_Laos.jpg" alt="Vientiane"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div
@@ -145,7 +172,7 @@
                     <div class="tour-card-premium reveal"
                         style="display: flex; flex-direction: row; height: 320px; transition-delay: 0.3s;">
                         <div style="flex: 1; overflow: hidden;">
-                            <img src="images/tours/elephant/PXL_20220901_030520392-960x636.jpg" alt="Pakse"
+                            <img src="images/Pakse/islands/Khonphapheng waterfall.jpg" alt="Pakse"
                                 style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div
@@ -154,6 +181,74 @@
                             <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"
                                 data-i18n="dest_ps_desc">Gateway to the
                                 South. Home to the Bolaven Plateau's coffee farms and the ancient Wat Phou.</p>
+                            <a href="tours.html" class="link-arrow" data-i18n="dest_view_tours">View Tours <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Dest 5: Luang Namtha -->
+                    <div class="tour-card-premium reveal"
+                        style="display: flex; flex-direction: row; height: 320px; transition-delay: 0.4s;">
+                        <div style="flex: 1; overflow: hidden;">
+                            <img src="images/Luang_Namtha/LuangNamtha_ThatLuangNamtha3_tango7174.jpg" alt="Luang Namtha"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div
+                            style="flex: 1.2; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-size: 2rem; margin-bottom: 15px;" data-i18n="dest_sv">Luang Namtha</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"
+                                data-i18n="dest_sv_desc">Coming Soon</p>
+                            <a href="tours.html" class="link-arrow" data-i18n="dest_view_tours">View Tours <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Dest 6: Thakhek -->
+                    <div class="tour-card-premium reveal"
+                        style="display: flex; flex-direction: row; height: 320px; transition-delay: 0.5s;">
+                        <div style="flex: 1; overflow: hidden;">
+                            <img src="images/tours/konglor/1.jpg" alt="Thakhek"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div
+                            style="flex: 1.2; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-size: 2rem; margin-bottom: 15px;" data-i18n="dest_tk">Thakhek</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"
+                                data-i18n="dest_tk_desc">Coming Soon</p>
+                            <a href="tours.html" class="link-arrow" data-i18n="dest_view_tours">View Tours <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Dest 7: Nong Khiaw -->
+                    <div class="tour-card-premium reveal"
+                        style="display: flex; flex-direction: row; height: 320px; transition-delay: 0.6s;">
+                        <div style="flex: 1; overflow: hidden;">
+                            <img src="images/tours/jungle/1.jpg" alt="Nong Khiaw"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div
+                            style="flex: 1.2; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-size: 2rem; margin-bottom: 15px;" data-i18n="dest_nk">Nong Khiaw</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"
+                                data-i18n="dest_nk_desc">Coming Soon</p>
+                            <a href="tours.html" class="link-arrow" data-i18n="dest_view_tours">View Tours <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Dest 8: Champasak -->
+                    <div class="tour-card-premium reveal"
+                        style="display: flex; flex-direction: row; height: 320px; transition-delay: 0.7s;">
+                        <div style="flex: 1; overflow: hidden;">
+                            <img src="images/tours/islands/4.jpg" alt="Champasak"
+                                style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div
+                            style="flex: 1.2; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                            <h3 style="font-size: 2rem; margin-bottom: 15px;" data-i18n="dest_cp">Champasak</h3>
+                            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"
+                                data-i18n="dest_cp_desc">Coming Soon</p>
                             <a href="tours.html" class="link-arrow" data-i18n="dest_view_tours">View Tours <i
                                     class="fas fa-arrow-right"></i></a>
                         </div>

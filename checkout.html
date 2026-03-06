@@ -11,8 +11,8 @@
 
     <!-- Flags & Style -->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/css/intlTelInput.css">
     <link rel='stylesheet' href='css/style.css'>
-    <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js" defer></script>
 
     <!-- PayPal Live Integration -->
@@ -232,6 +232,15 @@
         .auth-step i {
             font-size: 0.8rem;
         }
+
+        /* intl-tel-input overrides */
+        .iti {
+            width: 100%;
+        }
+
+        .iti__country-list {
+            z-index: 100;
+        }
     </style>
 </head>
 
@@ -248,8 +257,36 @@
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                    <li><a href="tours.html" data-i18n="nav_tours">Tours</a></li>
-                    <li><a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a></li>
+                    <li class="has-dropdown">
+                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
+                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
+                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
+                            <li><a href="tours.html">All Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="car-rentals.html">Car Rental</a></li>
+                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
+                            <li><a href="destinations.html" data-i18n="dest_lp">Luang Prabang</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vt">Vientiane</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vv">Vang Vieng</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_ps">Pakse</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_tk">Thakhek</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_nk">Nong Khiaw</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_sv">Luang Namtha</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_cp">Champasak</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
 
@@ -258,7 +295,7 @@
                     <div class="lang-current">
                         <span id="current-lang-flag" class="fi fi-us"></span>
                         <span id="current-lang-text" style="display:none"></span>
-                        
+
                     </div>
                     <div class="lang-list">
                         <button class="lang-btn active" data-lang="en"><span class="fi fi-us"></span></button>
@@ -326,8 +363,11 @@
                                 <label
                                     style="display:block; font-size: 0.8rem; font-weight: 600; color: #64748b; margin-bottom: 8px;">WhatsApp
                                     / Phone *</label>
-                                <input type="text" id="cust-whatsapp" placeholder="+856 20..."
+                                <input type="tel" id="cust-whatsapp"
                                     style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 0.9rem;">
+                                <div id="phone-error"
+                                    style="color: #ef4444; font-size: 0.75rem; margin-top: 5px; display: none;">Please
+                                    enter a valid phone number</div>
                             </div>
                         </div>
                         <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -471,9 +511,74 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/intlTelInput.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize international phone input
+            const phoneInput = document.querySelector("#cust-whatsapp");
+            const phoneError = document.querySelector("#phone-error");
+
+            const iti = window.intlTelInput(phoneInput, {
+                initialCountry: "la",
+                separateDialCode: true,
+                preferredCountries: ["la", "th", "vn", "us", "gb", "fr", "jp"],
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js",
+            });
+
+            // Validation logic
+            const validatePhone = () => {
+                const isValid = iti.isValidNumber();
+                if (phoneInput.value.trim()) {
+                    if (isValid) {
+                        phoneInput.style.borderColor = "#10b981"; // Success Green
+                        phoneError.style.display = "none";
+                        return true;
+                    } else {
+                        phoneInput.style.borderColor = "#ef4444"; // Error Red
+                        phoneError.style.display = "block";
+                        return false;
+                    }
+                }
+                phoneInput.style.borderColor = "#e2e8f0";
+                phoneError.style.display = "none";
+                return false;
+            };
+
+            phoneInput.addEventListener('keyup', validatePhone);
+            phoneInput.addEventListener('change', validatePhone);
+            phoneInput.addEventListener('countrychange', validatePhone);
+
+            // Auto-Save Logic
+            const fieldsToSave = ['cust-name', 'cust-email', 'travel-date'];
+
+            // Populate fields from localStorage on load
+            fieldsToSave.forEach(id => {
+                const savedValue = localStorage.getItem(`form_${id}`);
+                if (savedValue) {
+                    const el = document.getElementById(id);
+                    if (el) el.value = savedValue;
+                }
+            });
+
+            // Populating phone separately because of iti
+            const savedPhone = localStorage.getItem('form_cust-whatsapp');
+            if (savedPhone) phoneInput.value = savedPhone;
+
+            // Add change listeners to save data
+            fieldsToSave.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', () => {
+                        localStorage.setItem(`form_${id}`, el.value);
+                    });
+                }
+            });
+
+            phoneInput.addEventListener('input', () => {
+                localStorage.setItem('form_cust-whatsapp', phoneInput.value);
+            });
+
             // 1. Generate unique Booking ID if it doesn't exist for this session
             let bookingId = localStorage.getItem('current_booking_id');
             if (!bookingId) {
@@ -612,8 +717,13 @@
                 const dateInput = document.getElementById('travel-date');
                 const mode = localStorage.getItem('payment_mode');
 
-                if (!nameInput.value || !waInput.value || !emailInput.value || !dateInput.value) {
-                    showToast('Missing Info', 'Please fill in all required fields, including your Travel Date!', 'warning');
+                if (!nameInput.value || !iti.isValidNumber() || !emailInput.value || !dateInput.value) {
+                    if (!iti.isValidNumber()) {
+                        showToast('Invalid Phone', 'Please enter a valid phone number for your country.', 'warning');
+                        validatePhone();
+                    } else {
+                        showToast('Missing Info', 'Please fill in all required fields, including your Travel Date!', 'warning');
+                    }
                     return;
                 }
 
@@ -651,6 +761,12 @@
                 }
 
                 await sendNotification();
+
+                // Clear auto-saved data on success
+                ['cust-name', 'cust-email', 'travel-date', 'cust-whatsapp'].forEach(id => {
+                    localStorage.removeItem(`form_${id}`);
+                });
+
                 window.location.href = 'success.html';
             });
 
@@ -672,12 +788,19 @@
                 try {
                     const id = localStorage.getItem('current_booking_id');
                     const prodName = localStorage.getItem('selected_product_name');
-                    const guests = localStorage.getItem('selected_product_guests');
+                    const guests = document.getElementById('selected-guests')?.value || localStorage.getItem('selected_product_guests') || 1;
                     const date = document.getElementById('travel-date').value;
                     const custName = document.getElementById('cust-name').value;
-                    const custWA = document.getElementById('cust-whatsapp').value;
+                    const custWA = iti.getNumber();
                     const custEmail = document.getElementById('cust-email').value;
                     const mode = localStorage.getItem('payment_mode');
+
+                    // Store for success message
+                    localStorage.setItem('cust_name', custName);
+                    localStorage.setItem('cust_whatsapp', custWA);
+                    localStorage.setItem('cust_email', custEmail);
+                    localStorage.setItem('selected_product_guests', guests);
+                    localStorage.setItem('selected_product_date', date);
 
                     // 1. Send Email via FormSubmit
                     document.getElementById('email-id').value = id;
@@ -715,18 +838,17 @@
                     });
 
                     // 3. Send Telegram Notification (Admin Alert)
-                    // Replace these with your real bot token and chat id
-                    const TELEGRAM_TOKEN = 'YOUR_BOT_TOKEN_HERE';
-                    const TELEGRAM_CHAT_ID = 'YOUR_CHAT_ID_HERE';
+                    // Recommendation: Set your Bot Token and Chat ID below to get instant phone alerts!
+                    const TELEGRAM_TOKEN = '7667825000:AAFn3W_pOnC09_K_hX_kSInyK6XEnnE1YtQ'; // Replace with yours
+                    const TELEGRAM_CHAT_ID = '6010078044'; // Replace with yours
 
                     let tgTask = Promise.resolve();
-                    if (TELEGRAM_TOKEN !== 'YOUR_BOT_TOKEN_HERE') {
+                    if (TELEGRAM_TOKEN && TELEGRAM_CHAT_ID) {
                         const tgMsg = `🔔 *New Booking Request!*\n\n` +
                             `🆔 ID: ${id}\n` +
                             `🌍 Tour: ${prodName}\n` +
                             `👤 Guest: ${custName}\n` +
                             `📱 WhatsApp: ${custWA}\n` +
-                            `📧 Email: ${custEmail}\n` +
                             `📅 Date: ${date || 'TBC'}\n` +
                             `👥 Group: ${guests}\n` +
                             `💳 Mode: ${mode.toUpperCase()}`;

@@ -23,56 +23,68 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f8fafc;
+            background: linear-gradient(135deg, rgba(6, 95, 70, 0.8) 0%, rgba(13, 148, 136, 0.8) 100%),
+                url('https://images.unsplash.com/photo-1540304620021-d779fec5a918?auto=format&fit=crop&q=80&w=2000') center/cover fixed;
+            position: relative;
         }
 
         .success-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
             padding: 60px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-xl);
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3), 0 0 40px rgba(255, 255, 255, 0.1) inset;
             text-align: center;
-            max-width: 600px;
+            max-width: 650px;
             width: 90%;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            position: relative;
+            z-index: 10;
         }
 
         .success-icon {
-            width: 100px;
-            height: 100px;
-            background: #ecfdf5;
-            color: #10b981;
-            font-size: 3rem;
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            font-size: 3.5rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 30px;
-            animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: bounceIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+            border: 6px solid #ecfdf5;
         }
 
-        @keyframes scaleIn {
-            from {
+        @keyframes bounceIn {
+            0% {
                 transform: scale(0);
                 opacity: 0;
             }
 
-            to {
-                transform: scale(1);
+            50% {
+                transform: scale(1.1);
                 opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
             }
         }
 
         .success-title {
-            font-size: 2.5rem;
-            color: var(--primary);
+            font-size: 2.8rem;
+            color: var(--text-main);
             margin-bottom: 15px;
             font-family: 'Outfit', sans-serif;
+            font-weight: 700;
         }
 
         .success-subtitle {
-            font-size: 1.25rem;
-            color: var(--text-main);
+            font-size: 1.35rem;
+            color: var(--primary);
             margin-bottom: 25px;
             font-weight: 600;
         }
@@ -80,12 +92,50 @@
         .success-text {
             color: var(--text-muted);
             line-height: 1.8;
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+        }
+
+        .booking-details-box {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 20px;
             margin-bottom: 40px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .detail-row.total {
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 15px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .receipt-action-card {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border: 1px solid #fde68a;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.1);
         }
 
         .success-actions {
             display: grid;
             gap: 15px;
+            margin-top: 20px;
         }
 
         .confetti {
@@ -110,12 +160,48 @@
                 </a>
             </div>
 
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="tours.html" data-i18n="nav_tours">Tours</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
+                            <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
+                            <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
+                            <li><a href="tours.html">All Tours</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="car-rentals.html">Car Rental</a></li>
+                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
+                            <li><a href="destinations.html" data-i18n="dest_lp">Luang Prabang</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vt">Vientiane</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vv">Vang Vieng</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_ps">Pakse</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_tk">Thakhek</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_nk">Nong Khiaw</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_sv">Luang Namtha</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_cp">Champasak</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
             <div class="lang-switcher">
                 <div class="lang-dropdown">
                     <div class="lang-current">
                         <span id="current-lang-flag" class="fi fi-us"></span>
                         <span id="current-lang-text" style="display:none"></span>
-                        
+
                     </div>
                     <div class="lang-list">
                         <button class="lang-btn active" data-lang="en"><span class="fi fi-us"></span></button>
@@ -143,47 +229,54 @@
                 availability and finalize the details.
             </p>
 
-            <div class="booking-details-box"
-                style="background: #f1f5f9; padding: 25px; border-radius: 12px; margin-bottom: 40px; text-align: left;">
-                <div
-                    style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #cbd5e1; padding-bottom: 10px;">
+            <div id="wa-countdown-box"
+                style="margin-bottom: 35px; padding: 18px; background: #ecfdf5; border: 1px solid #d1fae5; border-radius: 16px; color: #065f46; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                <i class="fab fa-whatsapp" style="font-size: 1.4rem; color: #25D366;"></i>
+                <span>Forwarding to WhatsApp in <span id="wa-counter" style="color: var(--primary);">5</span>s...</span>
+            </div>
+
+            <div class="booking-details-box">
+                <div class="detail-row"
+                    style="border-bottom: 1px solid #cbd5e1; padding-bottom: 15px; margin-bottom: 15px;">
                     <span style="font-weight: 600; color: var(--text-main);" data-i18n="success_booking_id">Booking
                         ID</span>
-                    <strong id="display-booking-id" style="color: var(--secondary);">LST-2026-XXXX</strong>
+                    <strong id="display-booking-id"
+                        style="color: var(--secondary); font-size: 1.1rem;">LST-2026-XXXX</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.95rem;">
+                <div class="detail-row">
                     <span data-i18n="success_summary">Booking Summary</span>
                     <span id="display-product-name" style="font-weight: 600;">-</span>
                 </div>
-                <div style="display: flex; justify-content: space-between; margin-top: 5px; font-size: 0.95rem;">
-                    <span id="label-paid-status">Total Amount Paid</span>
-                    <span id="display-product-price" style="font-weight: 700; color: var(--primary);">-</span>
+                <div class="detail-row total">
+                    <span id="label-paid-status" style="font-weight: 600;">Total Amount Paid</span>
+                    <span id="display-product-price"
+                        style="font-weight: 700; color: var(--primary); font-size: 1.2rem;">-</span>
                 </div>
-                <div id="success-balance-row"
-                    style="display: none; justify-content: space-between; margin-top: 5px; font-size: 0.95rem; border-top: 1px dashed #cbd5e1; padding-top: 5px; color: #64748b;">
+                <div id="success-balance-row" class="detail-row"
+                    style="display: none; color: #64748b; font-size: 0.95rem;">
                     <span>Remaining (Pay in Cash)</span>
-                    <strong id="display-balance" style="font-weight: 600;">-</strong>
+                    <strong id="display-balance" style="font-weight: 600; color: var(--text-main);"></strong>
                 </div>
             </div>
 
             <!-- RECEIPT ACTION (New Step) -->
-            <div id="receipt-action-card"
-                style="display: none; background: #fffbeb; border: 2px solid #fde68a; padding: 25px; border-radius: 12px; margin-bottom: 40px; text-align: left;">
+            <div id="receipt-action-card" class="receipt-action-card" style="display: none;">
                 <h3
-                    style="color: #92400e; font-size: 1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    style="color: #92400e; font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
                     <i class="fas fa-exclamation-circle"></i>
                     <span>Wait! Final Action Required</span>
                 </h3>
-                <p style="font-size: 0.9rem; color: #b45309; line-height: 1.5; margin-bottom: 20px;">
+                <p style="font-size: 0.95rem; color: #b45309; line-height: 1.6; margin-bottom: 20px;">
                     To confirm your booking FAST, please <strong>attach your payment screenshot</strong> to the WhatsApp
                     message after clicking below.
                 </p>
                 <div
-                    style="background: white; padding: 10px; border-radius: 8px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); text-align: center;">
-                    <span style="font-size: 0.75rem; color: #94a3b8; display: block; margin-bottom: 8px;">Your uploaded
-                        receipt:</span>
+                    style="background: white; padding: 15px; border-radius: 12px; box-shadow: inset 0 2px 4px rgba(0,0,0,0.05); text-align: center;">
+                    <span
+                        style="font-size: 0.8rem; color: #94a3b8; display: block; margin-bottom: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Your
+                        uploaded receipt</span>
                     <img id="receipt-preview" src="" alt="Receipt Preview"
-                        style="max-width: 150px; height: auto; border: 1px solid #e2e8f0; border-radius: 4px;">
+                        style="max-width: 150px; height: auto; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                 </div>
             </div>
 
@@ -262,13 +355,28 @@
             }
 
             const waBtn = document.getElementById('whatsapp-confirm-btn');
+            const waUrl = `https://wa.me/8562098457614?text=${encodeURIComponent(message)}`;
+
             if (receiptDone) {
                 waBtn.innerHTML = '<i class="fab fa-whatsapp"></i> Send Receipt to confirm';
                 waBtn.style.background = '#25D366'; // WhatsApp Green
                 waBtn.style.borderColor = '#25D366';
                 waBtn.style.color = '#fff';
             }
-            waBtn.href = `https://wa.me/8562098457614?text=${encodeURIComponent(message)}`;
+            waBtn.href = waUrl;
+
+            // 4. Automatic Redirect Countdown
+            let timeLeft = 5;
+            const counterEl = document.getElementById('wa-counter');
+            const countdownInterval = setInterval(() => {
+                timeLeft--;
+                if (counterEl) counterEl.textContent = timeLeft;
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = waUrl;
+                    document.getElementById('wa-countdown-box').innerHTML = '<i class="fas fa-check-circle"></i> Redirecting...';
+                }
+            }, 1000);
 
             // 5. Show Final Confirmation Toast
             setTimeout(() => {

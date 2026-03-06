@@ -7,12 +7,254 @@
     <title>Motorbike Rentals | Laos Smile Trip - Adventure on Two Wheels</title>
     <meta name="description"
         content="Explore Luang Prabang at your own pace. High-quality motorbike rentals, from scooters to touring bikes. Safety gear included.">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css'>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js" defer></script>
+    <style>
+        .moto-hero {
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1558981403-c5f91cbba523?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .moto-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: translateUp 1s ease-out;
+        }
+
+        .moto-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.5);
+            color: #34d399;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            backdrop-filter: blur(4px);
+        }
+
+        .moto-title {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-family: 'Outfit', sans-serif;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .moto-subtitle {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .moto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: -80px;
+            position: relative;
+            z-index: 10;
+            padding: 0 20px 80px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .moto-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .moto-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 60px rgba(16, 185, 129, 0.15);
+        }
+
+        .moto-img-wrap {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .moto-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .moto-card:hover .moto-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .moto-price-tag {
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+            border: 3px solid white;
+        }
+
+        .moto-price-tag small {
+            font-size: 0.75rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .moto-details {
+            padding: 40px 30px 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .moto-details h3 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 10px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .moto-details p {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .moto-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .moto-feature {
+            font-size: 0.85rem;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .moto-feature i {
+            color: #10b981;
+        }
+
+        .moto-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 16px;
+            background: #0f172a;
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .moto-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .moto-btn:hover::before {
+            transform: scaleX(1);
+        }
+
+        .moto-btn:hover {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        .moto-card.coming-soon {
+            opacity: 0.7;
+            filter: grayscale(0.5);
+            cursor: not-allowed;
+            background: #f1f5f9;
+        }
+
+        .moto-card.coming-soon:hover {
+            transform: none;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes translateUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .moto-title {
+                font-size: 2.8rem;
+            }
+
+            .moto-grid {
+                margin-top: -40px;
+            }
+
+            .moto-price-tag {
+                font-size: 1rem;
+                padding: 8px 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header site-header--glass">
         <div class="container nav-bar">
             <div class="logo-block">
                 <a href="index.html" class="logo">
@@ -47,17 +289,18 @@
                         <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header" data-i18n="nav_top_destinations">Top Destinations</li>
-                            <li><a href="destinations.html">Luang Prabang</a></li>
-                            <li><a href="destinations.html">Vientiane Capital</a></li>
-                            <li><a href="destinations.html">Vang Vieng</a></li>
-                            <li><a href="destinations.html">Pakse (Champasak)</a></li>
-                            <li><a href="destinations.html">Xieng Khouang</a></li>
-                            <li><a href="destinations.html">Savannakhet</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_lp">Luang Prabang</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vt">Vientiane</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_vv">Vang Vieng</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_ps">Pakse</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_tk">Thakhek</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_nk">Nong Khiaw</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_sv">Luang Namtha</a></li>
+                            <li><a href="destinations.html" data-i18n="dest_cp">Champasak</a></li>
                         </ul>
                     </li>
                     <li><a href="laos.html" data-i18n="nav_laos">Laos</a></li>
                     <li><a href="eco-dyeing.html" data-i18n="nav_eco_dyeing">Eco-Dyeing</a></li>
-                    <li><a href="#footer" data-i18n="nav_contact">Contact</a></li>
                     <li><a href="about.html" data-i18n="nav_about">About</a></li>
                 </ul>
             </nav>
@@ -66,7 +309,7 @@
                     <div class="lang-current">
                         <span id="current-lang-flag" class="fi fi-us"></span>
                         <span id="current-lang-text" style="display:none"></span>
-                        
+
                     </div>
                     <div class="lang-list">
                         <button class="lang-btn active" data-lang="en"><span class="fi fi-us"></span></button>
@@ -81,102 +324,137 @@
     </header>
     <div class="nav-overlay"></div>
 
-    <main>
-        <!-- MOTORBIKE HERO -->
-        <section class="hero rentals-hero-new">
-            <div class="hero-slide">
-                <img src="https://images.unsplash.com/photo-1558981403-c5f91cbba523?q=80&w=2000&auto=format&fit=crop"
-                    class="hero-bg-img active" alt="Motorbike Adventure Laos">
-            </div>
-            <div class="container hero-content">
-                <div class="hero-glass-box reveal">
-                    <span class="hero-label">🏍️ Freedom on Two Wheels</span>
-                    <h1>Motorbike Rental</h1>
-                    <p>Discover the winding roads of Luang Prabang at your own rhythm. High-quality bikes for the
-                        ultimate local adventure.</p>
-                </div>
+    <main style="background-color: #f1f5f9;">
+        <!-- PREMIUM MOTORBIKE HERO -->
+        <section class="moto-hero">
+            <div class="moto-hero-content">
+                <span class="moto-badge"><i class="fas fa-motorcycle"></i> Freedom on Two Wheels</span>
+                <h1 class="moto-title">Motorbike Rentals</h1>
+                <p class="moto-subtitle">Discover the winding roads and hidden waterfalls of Luang Prabang at your own
+                    rhythm. High-quality, well-maintained bikes for the ultimate local adventure.</p>
             </div>
         </section>
 
-        <!-- FLEET SECTION -->
-        <section class="container reveal" style="padding: 8rem 0;">
-            <div class="section-header" style="text-align: center; margin-bottom: 5rem;">
-                <h2 class="section-title">Rent Your Ride</h2>
-                <p>Safety first: All rentals include helmets and a local map of hidden spots.</p>
-            </div>
+        <!-- PREMIUM FLEET GRID -->
+        <section class="moto-grid">
+            <!-- Vehicle 1: Scooter -->
+            <article class="moto-card">
+                <div class="moto-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1610452309192-3836ce664673?q=80&w=800&auto=format&fit=crop"
+                        alt="Honda Click Scooter">
+                    <div class="moto-price-tag">
+                        250,000 <small>KIP / Day</small>
+                    </div>
+                </div>
+                <div class="moto-details">
+                    <h3>Automatic Scooter (125cc)</h3>
+                    <p>Experience effortless city exploring. The Honda Click is nimble, reliable, and perfectly suited
+                        for trips to Kuang Si Falls or navigating historic streets.</p>
 
-            <div class="fleet-grid">
-                <!-- Vehicle 1 -->
-                <article class="fleet-card reveal">
-                    <div class="fleet-media">
-                        <img src="https://images.unsplash.com/photo-1610452309192-3836ce664673?q=80&w=800&auto=format&fit=crop"
-                            alt="Honda Click Scooter">
-                    </div>
-                    <div class="fleet-info">
-                        <div class="fleet-price">250,000 <small>KIP/Day</small></div>
-                        <h3>Automatic Scooter (125cc)</h3>
-                        <p>Easy to ride Honda Click or similar. Perfect for city exploring and Kuang Si trips.</p>
-                        <div class="fleet-features">
-                            <div class="feature-item">🏍️ Automatic</div>
-                            <div class="feature-item">🛡️ Helmet Included</div>
-                            <div class="feature-item">🤝 Easy Return</div>
-                            <div class="feature-item">🗺️ Local Map</div>
+                    <div class="moto-features">
+                        <div class="moto-feature">
+                            <i class="fas fa-cogs"></i> Automatic
                         </div>
-                        <a href="https://wa.me/8562098457614" class="btn" style="width: 100%; text-align: center;">Book
-                            on WhatsApp</a>
+                        <div class="moto-feature">
+                            <i class="fas fa-hard-hat"></i> 2 Helmets
+                        </div>
+                        <div class="moto-feature">
+                            <i class="fas fa-gas-pump"></i> Full Tank
+                        </div>
+                        <div class="moto-feature">
+                            <i class="fas fa-map-marked-alt"></i> Local Map
+                        </div>
                     </div>
-                </article>
 
-                <!-- Vehicle 2 -->
-                <article class="fleet-card reveal reveal-delay-1">
-                    <div class="fleet-media">
-                        <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?q=80&w=800&auto=format&fit=crop"
-                            alt="Honda CRF Touring">
-                    </div>
-                    <div class="fleet-info">
-                        <div class="fleet-price">650,000 <small>KIP/Day</small></div>
-                        <h3>Dual-Sport Touring (250cc)</h3>
-                        <p>Honda CRF or similar. For those looking to explore the rugged hills and river crossings.</p>
-                        <div class="fleet-features">
-                            <div class="feature-item">🏍️ Manual/Off-road</div>
-                            <div class="feature-item">🛡️ Full Gear Avail.</div>
-                            <div class="feature-item">🔧 Roadside Assist</div>
-                            <div class="feature-item">🏁 Pro Settings</div>
-                        </div>
-                        <a href="https://wa.me/8562098457614" class="btn" style="width: 100%; text-align: center;">Book
-                            on WhatsApp</a>
-                    </div>
-                </article>
+                    <a href="https://wa.me/8562098457614?text=Sabaidee!%20I'd%20like%20to%20reserve%20a%20125cc%20Scooter."
+                        class="moto-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Reserve via WhatsApp
+                    </a>
+                </div>
+            </article>
 
-                <!-- Coming Soon -->
-                <article class="fleet-card reveal reveal-delay-2" style="opacity: 0.8;">
-                    <div class="fleet-media" style="background: #eee;">
-                        <span style="font-size: 4rem;">🚲</span>
+            <!-- Vehicle 2: Touring -->
+            <article class="moto-card">
+                <div class="moto-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?q=80&w=800&auto=format&fit=crop"
+                        alt="Honda CRF Touring">
+                    <div class="moto-price-tag" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                        650,000 <small>KIP / Day</small>
                     </div>
-                    <div class="fleet-info">
-                        <div class="fleet-price">Coming <small>Soon</small></div>
-                        <h3>Electric City E-Bikes</h3>
-                        <p>Sustainable, quiet, and perfect for the UNESCO old town streets. Launching soon in 2026.</p>
-                        <div class="fleet-features">
-                            <div class="feature-item">⚡ 100% Electric</div>
-                            <div class="feature-item">🌿 Zero Emission</div>
+                </div>
+                <div class="moto-details">
+                    <h3>Dual-Sport Touring (250cc)</h3>
+                    <p>Designed for the true adventurer. The Honda CRF conquers rugged hills and dirt trails with ease.
+                        Perfect for an extended expedition across Northern Laos.</p>
+
+                    <div class="moto-features">
+                        <div class="moto-feature">
+                            <i class="fas fa-motorcycle"></i> Manual
                         </div>
-                        <span class="link-btn" style="color: #999;">Check back later</span>
+                        <div class="moto-feature">
+                            <i class="fas fa-shield-alt"></i> Full Gear
+                        </div>
+                        <div class="moto-feature">
+                            <i class="fas fa-tools"></i> 24/7 Assist
+                        </div>
+                        <div class="moto-feature">
+                            <i class="fas fa-road"></i> Off-Road
+                        </div>
                     </div>
-                </article>
-            </div>
+
+                    <a href="https://wa.me/8562098457614?text=Sabaidee!%20I'd%20like%20to%20reserve%20a%20250cc%20Dual-Sport."
+                        class="moto-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Reserve via WhatsApp
+                    </a>
+                </div>
+            </article>
+
+            <!-- Vehicle 3: Coming Soon -->
+            <article class="moto-card coming-soon">
+                <div class="moto-img-wrap">
+                    <div
+                        style="width: 100%; height: 100%; background: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 5rem; color: #94a3b8;">
+                        <i class="fas fa-biking"></i>
+                    </div>
+                    <div class="moto-price-tag" style="background: #64748b;">
+                        Coming <small>Late 2026</small>
+                    </div>
+                </div>
+                <div class="moto-details">
+                    <h3>Electric City E-Bike</h3>
+                    <p>Sustainable, silent, and entirely green. Navigate the UNESCO heritage town without leaving a
+                        carbon footprint.</p>
+
+                    <div class="moto-features">
+                        <div class="moto-feature">
+                            <i class="fas fa-bolt"></i> 100% Electric
+                        </div>
+                        <div class="moto-feature">
+                            <i class="fas fa-leaf"></i> Zero Emission
+                        </div>
+                    </div>
+
+                    <a href="#" class="moto-btn" style="background: #94a3b8; pointer-events: none;">
+                        <i class="fas fa-clock"></i> Check Back Later
+                    </a>
+                </div>
+            </article>
         </section>
 
-        <!-- CTAs -->
-        <section class="cta-banner reveal">
-            <div class="container cta-flex">
-                <div class="cta-content">
-                    <h2>Ready for the open road?</h2>
-                    <p>Contact us now to check availability and reserve your bike.</p>
-                </div>
-                <div class="cta-actions">
-                    <a href="https://wa.me/8562098457614" class="btn">Message Us</a>
-                </div>
+        <!-- CALL TO ACTION -->
+        <section style="background: white; padding: 100px 20px; text-align: center;">
+            <div
+                style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%); padding: 60px 40px; border-radius: 30px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                <span style="display: block; font-size: 3rem; margin-bottom: 20px;">🗺️</span>
+                <h2 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 20px; font-family: 'Outfit', sans-serif;">
+                    Ready for the Open Road?</h2>
+                <p style="color: #475569; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px;">Every rental
+                    includes tailored route recommendations from our experienced local team. Let us know where you want
+                    to go, and we'll equip you for the journey.</p>
+                <a href="https://wa.me/8562098457614" target="_blank" class="moto-btn"
+                    style="display: inline-flex; width: auto; padding: 16px 40px; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
+                    Ask a Local Expert
+                </a>
             </div>
         </section>
     </main>
