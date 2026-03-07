@@ -1080,9 +1080,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Also close mobile nav when a link is clicked
+    // Also close mobile nav when a regular link is clicked
     document.querySelectorAll('.main-nav a').forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            // Do not close nav if we're clicking a dropdown toggle on mobile
+            if (window.innerWidth <= 991 && (link.parentElement.classList.contains('has-dropdown') || link.parentElement.classList.contains('has-subdropdown'))) {
+                return;
+            }
+            
             const nav = document.getElementById('main-nav');
             const menuToggle = document.getElementById('mobile-menu-btn');
             const overlay = document.querySelector('.nav-overlay');
