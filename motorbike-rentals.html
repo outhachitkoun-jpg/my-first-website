@@ -255,18 +255,14 @@
 </head>
 
 <body>
-    <header class="site-header site-header--glass">
+        <header class="site-header site-header--glass">
         <div class="container nav-bar">
             <div class="logo-block">
                 <a href="index.html" class="logo">
                     <img src="images/logo93.png" alt="Laos Smile Trip" class="logo-img">
                 </a>
             </div>
-            <a href="#main-nav" class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+
             <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="index.html" data-i18n="nav_home">Home</a></li>
@@ -276,8 +272,7 @@
                             <li><a href="tour-heritage-waterfalls.html">Heritage & Waterfalls</a></li>
                             <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
                             <li><a href="tour-mekong-cruise-2day.html">Mekong Cruise (2-Day)</a></li>
-                            <li><a href="tour-nong-khiaw-2-Day Trekking.html">Nong Khiaw Trekking</a></li>
-
+                            <li><a href="tour-nong-khiaw-trekking.html">Nong Khiaw Trekking</a></li>
                             <li><a href="tours.html">All Tours</a></li>
                         </ul>
                     </li>
@@ -285,7 +280,7 @@
                         <a href="car-rentals.html" data-i18n="nav_rentals">Rentals</a>
                         <ul class="dropdown-menu">
                             <li><a href="car-rentals.html">Car Rental</a></li>
-                            <li><a href="motorbike-rentals.html" class="active">Motorbike Rental</a></li>
+                            <li><a href="motorbike-rentals.html">Motorbike Rental</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -298,13 +293,9 @@
                                     data-i18n="dest_lp">Luang Prabang <i class="fas fa-chevron-right"
                                         style="font-size: 0.7em; margin-left: 8px;"></i></a>
                                 <ul class="dropdown-menu sub-dropdown-menu">
-                                    <li><a href="tour-nong-khiaw-2-Day%20Trekking.html" data-i18n="dest_nk">Nong
-                                            Khiaw</a>
-                                    </li>
-                                    <li><a href="tour-luangprabang-city.html">Luang Prabang City</a>
-                                    </li>
-                                    <li><a href="tour-elephant-adventure.html">Elephant Adventure</a>
-                                    </li>
+                                    <li><a href="tour-nong-khiaw-trekking.html" data-i18n="dest_nk">Nong Khiaw</a></li>
+                                    <li><a href="tour-luangprabang-city.html">Luang Prabang City</a></li>
+                                    <li><a href="tour-elephant-adventure.html">Elephant Adventure</a></li>
                                 </ul>
                             </li>
                             <li><a href="destinations.html" data-i18n="dest_vt">Vientiane</a></li>
@@ -315,26 +306,31 @@
                             <li><a href="destinations.html" data-i18n="dest_cp">Champasak</a></li>
                         </ul>
                     </li>
-                    <li><a href="laos.html" data-i18n="nav_laos">Laos</a></li>
-                    <li><a href="eco-dyeing.html" data-i18n="nav_eco_dyeing">Eco-Dyeing</a></li>
                     <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                    <li><a href="checkout.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a></li>
                 </ul>
             </nav>
+
             <div class="lang-switcher">
                 <div class="lang-dropdown">
                     <div class="lang-current">
                         <span id="current-lang-flag" class="fi fi-us"></span>
                         <span id="current-lang-text" style="display:none"></span>
-
                     </div>
                     <div class="lang-list">
                         <button class="lang-btn active" data-lang="en"><span class="fi fi-us"></span></button>
-                        <button class="lang-btn" data-lang="fr"><span class="fi fi-fr"></span></button>
                         <button class="lang-btn" data-lang="la"><span class="fi fi-la"></span></button>
+                        <button class="lang-btn" data-lang="fr"><span class="fi fi-fr"></span></button>
                         <button class="lang-btn" data-lang="ja"><span class="fi fi-jp"></span></button>
                         <button class="lang-btn" data-lang="th"><span class="fi fi-th"></span></button>
                     </div>
                 </div>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -475,31 +471,49 @@
         </section>
     </main>
 
-    <footer id="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <img src="images/logo93.png" alt="Logo" class="footer-logo">
-                <p data-i18n="footer_about">Your trusted local partner for unforgettable Asian adventures.</p>
+        <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo93.png" alt="Logo" class="footer-logo">
+                    <p data-i18n="footer_about">Premier local tour operator and DMC, dedicated to authentic slow travel and sustainable heritage tourism in the heart of Laos.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="quick_links">Explore</h4>
+                    <ul>
+                        <li><a href="tours.html">All Tours</a></li>
+                        <li><a href="car-rentals.html">Car Rentals</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="nav_laos">Travel Info</h4>
+                    <ul>
+                        <li><a href="laos.html">About Laos</a></li>
+                        <li><a href="eco-dyeing.html">Eco-Dyeing</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Luang Prabang, Laos</li>
+                        <li><i class="fas fa-phone"></i> +856 20 9845 7614</li>
+                        <li><i class="fas fa-envelope"></i> luangprabangsmiletrip@gmail.com</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links" style="display: flex; flex-direction: column; gap: 1rem;">
-                <h4 data-i18n="quick_links">Quick Links</h4>
-                <ul
-                    style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tours.html">Tours</a></li>
-                    <li><a href="car-rentals.html">Rentals</a></li>
-                </ul>
+
+            <div class="footer-bottom flex-between">
+                <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                </div>
             </div>
-            <div class="footer-contact">
-                <h4>Contact Info</h4>
-                <p>📍 Luang Prabang, Laos</p>
-                <p>📞 +856 20 9845 7614</p>
-                <p>📧 luangprabangsmiletrip@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom"
-            style="text-align: center; padding: 2rem 0; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4rem;">
-            <p>&copy; 2026 Laos Smile Trip. All rights reserved.</p>
         </div>
     </footer>
 
