@@ -1176,8 +1176,8 @@ img {
 
 @media (max-width: 991px) {
     .whatsapp-float {
-        bottom: 90px;
-        /* Above the bottom nav */
+        bottom: 155px;
+        /* Safely above the sticky mobile CTA */
         right: 20px;
         width: 55px;
         height: 55px;
@@ -1590,7 +1590,8 @@ img {
 
 @media (max-width: 480px) {
     .whatsapp-float {
-        bottom: 85px;
+        bottom: 150px;
+        /* Safely above the sticky mobile CTA */
         right: 15px;
         width: 50px;
         height: 50px;

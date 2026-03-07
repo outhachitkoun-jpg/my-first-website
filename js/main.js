@@ -179,12 +179,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(bottomNav);
 
         // 2. WhatsApp Pulsed Floating Button
-        const waButton = document.createElement('a');
-        waButton.href = 'https://wa.me/8562098457614';
-        waButton.className = 'whatsapp-float';
-        waButton.target = '_blank';
-        waButton.innerHTML = '<i class="fab fa-whatsapp"></i>';
-        document.body.appendChild(waButton);
+        if (!document.querySelector('.whatsapp-float')) {
+            const waButton = document.createElement('a');
+            waButton.href = 'https://wa.me/8562098457614';
+            waButton.className = 'whatsapp-float';
+            waButton.target = '_blank';
+            waButton.innerHTML = '<i class="fab fa-whatsapp"></i>';
+            document.body.appendChild(waButton);
+        }
 
         // 3. Sticky Bottom CTA (Only on Tour/Rental sub-pages)
         const isSubPage = (path.includes('tour-') || path.includes('eco-dyeing') || path.includes('rentals.html') || path.includes('motorbike'));
