@@ -120,7 +120,7 @@ const translations = {
         "rentals_tag_groups": "Groups",
         "rentals_tag_executive": "Executive",
         "rental_suv_title": "Premium SUV (4-Seater)",
-        "rental_suv_desc": "Modern Changan SUV or similar. Late-model luxury with superior suspension for smooth travel.",
+        "rental_suv_desc": "Premium SUV or similar. Late-model luxury with superior suspension for smooth travel.",
         "rental_minivan_title": "Comfort Minivan (12-Seater)",
         "rental_minivan_desc": "Classic Toyota Hiace. Reliable, spacious, and perfect for family groups or shared excursions.",
         "rental_luxury_minivan_title": "Luxury Minivan (12-Seater)",
@@ -216,7 +216,8 @@ const translations = {
         "form_guests_label": "Number of Guests *",
         "form_notes_placeholder": "Special Requirements / Description (Optional)",
         "form_btn_whatsapp": "Inquiry via WhatsApp",
-        "form_btn_email": "Inquiry via Email"
+        "form_btn_email": "Inquiry via Email",
+        "btn_inquire_book": "Inquiry & Book"
     },
     fr: {
         "nav_home": "Accueil",
@@ -339,7 +340,7 @@ const translations = {
         "rentals_tag_groups": "Groupes",
         "rentals_tag_executive": "Exécutif",
         "rental_suv_title": "SUV Premium (4 places)",
-        "rental_suv_desc": "SUV Changan moderne ou similaire. Luxe de modèle récent avec une suspension supérieure pour un voyage en douceur.",
+        "rental_suv_desc": "SUV Premium ou similaire. Luxe de modèle récent avec une suspension supérieure pour un voyage en douceur.",
         "rental_minivan_title": "Minivan Confort (12 places)",
         "rental_minivan_desc": "Toyota Hiace classique. Fiable, spacieux et parfait pour les groupes familiaux ou les excursions partagées.",
         "rental_luxury_minivan_title": "Minivan de Luxe (12 places)",
@@ -435,7 +436,8 @@ const translations = {
         "form_guests_label": "Nombre de personnes *",
         "form_notes_placeholder": "Besoins spéciaux / Description (Optionnel)",
         "form_btn_whatsapp": "Demande via WhatsApp",
-        "form_btn_email": "Demande via Email"
+        "form_btn_email": "Demande via Email",
+        "btn_inquire_book": "Demande & Réservation"
     },
     la: {
         "nav_home": "ໜ້າຫຼັກ",
@@ -546,7 +548,7 @@ const translations = {
         "rentals_tag_groups": "ກຸ່ມຄະນະ",
         "rentals_tag_executive": "ລະດັບຜູ້ບໍລິຫານ",
         "rental_suv_title": "ລົດ SUV ພຣີມຽມ (4 ບ່ອນນັ່ງ)",
-        "rental_suv_desc": "ລົດ Changan SUV ລຸ້ນໃໝ່ ຫຼື ທຽບເທົ່າ. ຄວາມຫຼູຫຼາພ້ອມລະບົບຊ່ວງລ່າງທີ່ນຸ້ມນວນ.",
+        "rental_suv_desc": "ລົດ SUV ພຣີມຽມ ຫຼື ທຽບເທົ່າ. ຄວາມຫຼູຫຼາພ້ອມລະບົບຊ່ວງລ່າງທີ່ນຸ້ມນວນ.",
         "rental_minivan_title": "ລົດຕູ້ມາດຕະຖານ (12 ບ່ອນນັ່ງ)",
         "rental_minivan_desc": "Toyota Hiace ລຸ້ນຍອດນິຍົມ. ເໝາະສຳລັບຄອບຄົວ ຫຼື ກຸ່ມນັກທ່ອງທ່ຽວ.",
         "rental_luxury_minivan_title": "ລົດຕູ້ພຣີມຽມ (12 ບ່ອນນັ່ງ)",
@@ -642,7 +644,8 @@ const translations = {
         "form_guests_label": "ຈຳນວນແຂກ *",
         "form_notes_placeholder": "ຄວາມຕ້ອງການພິເສດ / ລາຍລະອຽດ (ຖ້າມີ)",
         "form_btn_whatsapp": "ສອບຖາມຜ່ານ WhatsApp",
-        "form_btn_email": "ສອບຖามຜ່ານ Email"
+        "form_btn_email": "ສອບຖາມຜ່ານ Email",
+        "btn_inquire_book": "ສອບຖາມ ແລະ ຈອງ"
     },
     ja: {
         // Navigation
@@ -695,7 +698,7 @@ const translations = {
         "tour_mekong_tagline": "ラオスを流れるメコン川の魅力をクルーズで体験。",
 
         // Footer
-        "footer_about": "アジアでの忘れられない冒険のための、信頼できる現지의パートナー。",
+        "footer_about": "アジアでの忘れられない冒険のための、信頼できる現地のパートナー。",
         "quick_links": "クイックリンク",
 
         // About Laos Page
@@ -746,7 +749,7 @@ const translations = {
         "rentals_tag_groups": "グループ",
         "rentals_tag_executive": "エグゼクティブ",
         "rental_suv_title": "プレミアムSUV（4人乗り）",
-        "rental_suv_desc": "最新のChangan SUVまたは同等クラス。スムーズな走行のための優れたサスペンションを備えた最新モデルのラグジュアリー。",
+        "rental_suv_desc": "プレミアムSUVまたは同等クラス。スムーズな走行のための優れたサスペンションを備えた最新モデルのラグジュアリー。",
         "rental_minivan_title": "コンフォートミニバン（12人乗り）",
         "rental_minivan_desc": "定番のトヨタ・ハイエース。信頼性が高く、広々としており、家族連れやグループでの小旅行に最適です。",
         "rental_luxury_minivan_title": "ラグジュアリーミニバン（12人乗り）",
@@ -830,7 +833,8 @@ const translations = {
         "form_guests_label": "人数 *",
         "form_notes_placeholder": "特別な要望 / 詳細 (任意)",
         "form_btn_whatsapp": "WhatsAppで問い合わせる",
-        "form_btn_email": "メールで問い合わせる"
+        "form_btn_email": "メールで問い合わせる",
+        "btn_inquire_book": "お問い合わせ・予約"
     },
     th: {
         // Navigation
@@ -955,7 +959,7 @@ const translations = {
         "rentals_tag_groups": "Groups",
         "rentals_tag_executive": "Executive",
         "rental_suv_title": "Premium SUV (4 Seats)",
-        "rental_suv_desc": "New Changan SUV or equivalent. Luxury with a smooth suspension system.",
+        "rental_suv_desc": "รถ SUV พรีเมียม หรือเทียบเท่า หรูหราพร้อมระบบช่วงล่างที่นุ่มนวล",
         "rental_minivan_title": "Standard Minivan (12 Seats)",
         "rental_minivan_desc": "Popular Toyota Hiace. Perfect for families or tourist groups.",
         "rental_luxury_minivan_title": "Premium Minivan (12 Seats)",
@@ -1077,7 +1081,8 @@ const translations = {
         "form_guests_label": "จำนวนผู้ร่วมเดินทาง *",
         "form_notes_placeholder": "ความต้องการพิเศษ / รายละเอียด (ระบุหรือไม่ก็ได้)",
         "form_btn_whatsapp": "สอบถามผ่าน WhatsApp",
-        "form_btn_email": "สอบถามผ่านทางอีเมล"
+        "form_btn_email": "สอบถามผ่านทางอีเมล",
+        "btn_inquire_book": "สอบถามและจอง"
     }
 };
 
