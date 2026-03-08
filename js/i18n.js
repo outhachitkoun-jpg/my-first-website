@@ -200,7 +200,23 @@ const translations = {
         "success_home_btn": "Back to Home",
         "success_whatsapp_btn": "Message us on WhatsApp",
         "success_booking_id": "Booking ID",
-        "success_summary": "Booking Summary"
+        "success_summary": "Booking Summary",
+        "rentals_tag_premium": "Premium Choice",
+        "rental_fortuner_title": "Toyota Fortuner TRD (White)",
+        "rental_fortuner_desc": "Iconic 4x4 SUV. Extremely tough, comfortable, and perfect for adventurous journeys across Laos.",
+        "rental_feature_seats_7": "7 Seats",
+        "rental_feature_4wd": "4WD Expert",
+        "rentals_tag_comfort": "Top Comfort",
+        "rental_chevrolet_title": "Chevrolet Trailblazer (Red)",
+        "rental_chevrolet_desc": "Premium American SUV. Powerful performance and a spacious interior for a smooth family trip.",
+        "rental_feature_seats_12": "12-15 Seats",
+        "form_name_placeholder": "Your Name *",
+        "form_phone_placeholder": "WhatsApp / Phone Number *",
+        "form_date_label": "Travel Date *",
+        "form_guests_label": "Number of Guests *",
+        "form_notes_placeholder": "Special Requirements / Description (Optional)",
+        "form_btn_whatsapp": "Inquiry via WhatsApp",
+        "form_btn_email": "Inquiry via Email"
     },
     fr: {
         "nav_home": "Accueil",
@@ -403,7 +419,23 @@ const translations = {
         "success_home_btn": "Retour à l'accueil",
         "success_whatsapp_btn": "Contactez-nous sur WhatsApp",
         "success_booking_id": "Identifiant de réservation",
-        "success_summary": "Résumé de la réservation"
+        "success_summary": "Résumé de la réservation",
+        "rentals_tag_premium": "Choix Premium",
+        "rental_fortuner_title": "Toyota Fortuner TRD (Blanc)",
+        "rental_fortuner_desc": "SUV 4x4 iconique. Extrêmement robuste, confortable et parfait pour les voyages d'aventure à travers le Laos.",
+        "rental_feature_seats_7": "7 Sièges",
+        "rental_feature_4wd": "Expert 4x4",
+        "rentals_tag_comfort": "Confort Supérieur",
+        "rental_chevrolet_title": "Chevrolet Trailblazer (Rouge)",
+        "rental_chevrolet_desc": "SUV américain premium. Performances puissantes et intérieur spacieux pour un voyage en famille en douceur.",
+        "rental_feature_seats_12": "12-15 Sièges",
+        "form_name_placeholder": "Votre Nom *",
+        "form_phone_placeholder": "WhatsApp / Numéro de téléphone *",
+        "form_date_label": "Date du voyage *",
+        "form_guests_label": "Nombre de personnes *",
+        "form_notes_placeholder": "Besoins spéciaux / Description (Optionnel)",
+        "form_btn_whatsapp": "Demande via WhatsApp",
+        "form_btn_email": "Demande via Email"
     },
     la: {
         "nav_home": "ໜ້າຫຼັກ",
@@ -594,7 +626,23 @@ const translations = {
         "success_home_btn": "ກັບໄປໜ້າຫຼັກ",
         "success_whatsapp_btn": "ຕິດຕໍ່ຜ່ານ WhatsApp",
         "success_booking_id": "ລະຫັດການຈອງ",
-        "success_summary": "ລາຍລະອຽດການຈອງ"
+        "success_summary": "ລາຍລະອຽດການຈອງ",
+        "rentals_tag_premium": "ຕົວເລືອກພຣີມຽມ",
+        "rental_fortuner_title": "Toyota Fortuner TRD (ສີຂາວ)",
+        "rental_fortuner_desc": "ລົດ SUV 4x4 ຍອດນິຍົມ. ມີຄວາມທົນທານສູງ, ສະດວກສະບາຍ ແລະ ເໝາະສຳລັບການເດີນທາງຜະຈົນໄພທົ່ວປະເທดລາວ.",
+        "rental_feature_seats_7": "7 ບ່ອນນັ່ງ",
+        "rental_feature_4wd": "ລະບົບຂັບເຄື່ອນ 4 ລໍ້",
+        "rentals_tag_comfort": "ຄວາມສະດວກສະບາຍສູງສຸດ",
+        "rental_chevrolet_title": "Chevrolet Trailblazer (ສີແດງ)",
+        "rental_chevrolet_desc": "ລົດ SUV ອາເມລິກາລະດັບພຣີມຽມ. ສະມັດຖະນະສູງ ແລະ ຫ້ອງໂດຍສານກວ້າງຂວາງສຳລັບການເດີນທາງແບບຄອບຄົວ.",
+        "rental_feature_seats_12": "12-15 ບ່ອນນັ່ງ",
+        "form_name_placeholder": "ຊື່ຂອງທ່ານ *",
+        "form_phone_placeholder": "WhatsApp / ເບີໂທລະສັບ *",
+        "form_date_label": "ວັນທີເດີນທາງ *",
+        "form_guests_label": "ຈຳນວນແຂກ *",
+        "form_notes_placeholder": "ຄວາມຕ້ອງການພິເສດ / ລາຍລະອຽດ (ຖ້າມີ)",
+        "form_btn_whatsapp": "ສອບຖາມຜ່ານ WhatsApp",
+        "form_btn_email": "ສອບຖามຜ່ານ Email"
     },
     ja: {
         // Navigation
@@ -766,7 +814,23 @@ const translations = {
         "success_subtitle": "Laos Smile Trip をご利用いただきありがとうございます。",
         "success_msg": "旅行の準備を進めております。詳細を確認するため、まもなく担当者より WhatsApp またはメールでご連絡いたします。",
         "success_home_btn": "ホームに戻る",
-        "success_whatsapp_btn": "WhatsApp でメッセージを送る"
+        "success_whatsapp_btn": "WhatsApp でメッセージを送る",
+        "rentals_tag_premium": "プレミアムな選択",
+        "rental_fortuner_title": "トヨタ フォーチュナー TRD (白)",
+        "rental_fortuner_desc": "象徴的な4x4 SUV。非常にタフで快適、ラオス全土のアドベンチャー旅行に最適です。",
+        "rental_feature_seats_7": "7席",
+        "rental_feature_4wd": "4WDエキスパート",
+        "rentals_tag_comfort": "最高の快適さ",
+        "rental_chevrolet_title": "シボレー トレイルブレイザー (赤)",
+        "rental_chevrolet_desc": "プレミアムなアメリカンSUV。強力なパフォーマンスと広々としたインテリアで、スムーズな家族旅行を実現します。",
+        "rental_feature_seats_12": "12-15席",
+        "form_name_placeholder": "お名前 *",
+        "form_phone_placeholder": "WhatsApp / 電話番号 *",
+        "form_date_label": "旅行日 *",
+        "form_guests_label": "人数 *",
+        "form_notes_placeholder": "特別な要望 / 詳細 (任意)",
+        "form_btn_whatsapp": "WhatsAppで問い合わせる",
+        "form_btn_email": "メールで問い合わせる"
     },
     th: {
         // Navigation
@@ -997,8 +1061,23 @@ const translations = {
         "success_booking_id": "หมายเลขการจอง",
         "success_summary": "สรุปการจอง",
         "success_home_btn": "กลับสู่หน้าหลัก",
-        "success_whatsapp_btn": "ติดต่อเราทาง WhatsApp"
-
+        "success_whatsapp_btn": "ติดต่อเราทาง WhatsApp",
+        "rentals_tag_premium": "ตัวเลือกพรีเมียม",
+        "rental_fortuner_title": "Toyota Fortuner TRD (ขาว)",
+        "rental_fortuner_desc": "รถ SUV 4x4 ระดับตำนาน แข็งแกร่ง ทนทาน สะดวกสบาย เหมาะสำหรับการเดินทางผจญภัยทั่วลาว",
+        "rental_feature_seats_7": "7 ที่นั่ง",
+        "rental_feature_4wd": "ขับเคลื่อน 4 ล้อ",
+        "rentals_tag_comfort": "ความสะดวกสบายสูงสุด",
+        "rental_chevrolet_title": "Chevrolet Trailblazer (แดง)",
+        "rental_chevrolet_desc": "รถ SUV อเมริกันระดับพรีเมียม สมรรถนะทรงพลังและห้องโดยสารกว้างขวางสำหรับการเดินทางแบบครอบครัว",
+        "rental_feature_seats_12": "12-15 ที่นั่ง",
+        "form_name_placeholder": "ชื่อของคุณ *",
+        "form_phone_placeholder": "WhatsApp / เบอร์โทรศัพท์ *",
+        "form_date_label": "วันที่เดินทาง *",
+        "form_guests_label": "จำนวนผู้ร่วมเดินทาง *",
+        "form_notes_placeholder": "ความต้องการพิเศษ / รายละเอียด (ระบุหรือไม่ก็ได้)",
+        "form_btn_whatsapp": "สอบถามผ่าน WhatsApp",
+        "form_btn_email": "สอบถามผ่านทางอีเมล"
     }
 };
 
