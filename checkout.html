@@ -163,10 +163,64 @@
         @media (max-width: 991px) {
             .checkout-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
 
-        /* PROCESSING OVERLAY */
+        @media (max-width: 768px) {
+            .checkout-container {
+                padding-top: 100px;
+                padding-bottom: 80px;
+            }
+
+            .checkout-container h1 {
+                font-size: 2rem !important;
+                margin-bottom: 25px !important;
+            }
+
+            .checkout-main,
+            .checkout-sidebar {
+                padding: 25px 20px;
+            }
+
+            .checkout-section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .checkout-section h3 {
+                font-size: 1.15rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            .type-options {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .type-btn {
+                padding: 18px;
+                flex-direction: row;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .summary-total {
+                font-size: 1.25rem;
+            }
+
+            #main-checkout-btn {
+                padding: 16px 30px !important;
+                font-size: 1.1rem !important;
+                margin-top: 25px !important;
+            }
+        }
+
+        /* processing overlay */
         #processing-overlay {
             position: fixed;
             top: 0;
@@ -366,7 +420,7 @@
                             <i class="fas fa-user-circle" style="color: var(--primary);"></i>
                             <span>Your Contact Information</span>
                         </h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                             <div>
                                 <label
                                     style="display:block; font-size: 0.8rem; font-weight: 600; color: #64748b; margin-bottom: 8px;">Full
@@ -392,7 +446,7 @@
                             <i class="fas fa-calendar-alt" style="color: var(--primary);"></i>
                             <span>Travel Details</span>
                         </h3>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                             <div>
                                 <label
                                     style="display:block; font-size: 0.8rem; font-weight: 600; color: #64748b; margin-bottom: 8px;">Email
